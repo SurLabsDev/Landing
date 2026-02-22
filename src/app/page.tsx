@@ -3,6 +3,7 @@ import { Footer } from "@/components/ui/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Process } from "@/components/sections/Process";
+import { Demos } from "@/components/sections/Demos";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="flex flex-col">
         <Hero />
         <Projects />
+        <Demos />
         <Process />
         <Contact />
       </main>
