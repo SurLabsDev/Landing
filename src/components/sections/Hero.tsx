@@ -23,7 +23,7 @@ export function Hero() {
                     <span className="flex h-2 w-2 rounded-full bg-surlabs-accent animate-pulse relative">
                         <span className="absolute inset-0 rounded-full bg-surlabs-accent animate-ping opacity-75"></span>
                     </span>
-                    +5 años de experiencia creando soluciones
+                    No solo código: priorizamos impacto y velocidad.
                 </motion.div>
 
                 <motion.h1
@@ -32,9 +32,9 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1 }}
                 >
-                    Construimos el <br className="hidden md:block" />
+                    Software y AI para <br className="hidden md:block" />
                     <span className="text-glow text-transparent bg-clip-text bg-gradient-to-r from-surlabs-accent via-white to-surlabs-secondary">
-                        futuro digital
+                        crecer tu negocio
                     </span>
                 </motion.h1>
 
@@ -44,9 +44,7 @@ export function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    En Surlabs transformamos ideas complejas en soluciones de software elegantes,
-                    escalables y de alto rendimiento. Con probada experiencia en la industria,
-                    somos el partner tecnológico estratégico que necesita tu empresa.
+                    Diseñamos, construimos y optimizamos software y automatizaciones para equipos que quieren vender más y operar con claridad. Productos que generan resultados reales.
                 </motion.p>
 
                 <motion.div
@@ -58,19 +56,19 @@ export function Hero() {
                     <motion.a
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        href="#proyectos"
+                        href="#contacto"
                         className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-bold hover:bg-white/90 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                     >
-                        Ver proyectos
+                        Diagnóstico gratis
                         <ArrowRight className="w-4 h-4" />
                     </motion.a>
                     <motion.a
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        href="#contacto"
+                        href="#proyectos"
                         className="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-white hover:bg-white/10 hover:border-surlabs-accent/30 transition-all font-semibold"
                     >
-                        Hablemos de tu idea
+                        Ver soluciones
                     </motion.a>
                 </motion.div>
             </div>
