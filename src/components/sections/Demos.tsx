@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Briefcase, ShoppingBag, Palette, Gamepad2, CalendarCheck, Coffee, Image as ImageIcon } from "lucide-react";
 
@@ -82,6 +83,17 @@ const cardVariants = {
 };
 
 export function Demos() {
+    const [mountedIframes, setMountedIframes] = useState<Record<string, boolean>>({});
+
+    useEffect(() => {
+        // Stagger iframe loading to prevent browser freezing on initial load
+        demos.forEach((demo, index) => {
+            setTimeout(() => {
+                setMountedIframes(prev => ({ ...prev, [demo.id]: true }));
+            }, 1500 + (index * 800)); // First loads after 1.5s, subsequent ones every 800ms
+        });
+    }, []);
+
     return (
         <section id="demos" className="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
             <motion.div
@@ -138,14 +150,16 @@ export function Demos() {
 
                                 {/* Actual iframe fixed to not be interactive */}
                                 <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] z-10 bg-white">
-                                    <iframe
-                                        src={demo.url}
-                                        className="w-full h-full border-0 pointer-events-none transition-transform duration-700 group-hover:scale-[1.02]"
-                                        title={`Demo de ${demo.title}`}
-                                        tabIndex={-1}
-                                        loading="lazy"
-                                        scrolling="no"
-                                    />
+                                    {mountedIframes[demo.id] && (
+                                        <iframe
+                                            src={demo.url}
+                                            className="w-full h-full border-0 pointer-events-none transition-transform duration-700 group-hover:scale-[1.02]"
+                                            title={`Demo de ${demo.title}`}
+                                            tabIndex={-1}
+                                            loading="lazy"
+                                            scrolling="no"
+                                        />
+                                    )}
                                 </div>
                             </div>
 
