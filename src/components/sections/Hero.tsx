@@ -83,26 +83,26 @@ export function Hero() {
                 </motion.div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white">
-                    <motion.div className="overflow-hidden inline-block align-top">
+                    <motion.div className="overflow-visible inline-block align-top">
                         <motion.span variants={textRevealVariants} className="inline-block">Software</motion.span>
                     </motion.div>
                     {" "}
-                    <motion.div className="overflow-hidden inline-block align-top">
+                    <motion.div className="overflow-visible inline-block align-top">
                         <motion.span variants={textRevealVariants} className="inline-block">y</motion.span>
                     </motion.div>
                     {" "}
-                    <motion.div className="overflow-hidden inline-block align-top">
+                    <motion.div className="overflow-visible inline-block align-top">
                         <motion.span variants={textRevealVariants} className="inline-block">AI</motion.span>
                     </motion.div>
                     {" "}
-                    <motion.div className="overflow-hidden inline-block align-top">
+                    <motion.div className="overflow-visible inline-block align-top">
                         <motion.span variants={textRevealVariants} className="inline-block">para</motion.span>
                     </motion.div>
                     <br className="hidden md:block" />
-                    <motion.div className="overflow-hidden inline-block align-top mt-2">
+                    <motion.div className="overflow-visible inline-block align-top mt-2">
                         <motion.span
                             variants={textRevealVariants}
-                            className="inline-block text-glow text-transparent bg-clip-text bg-gradient-to-r from-surlabs-accent via-white to-surlabs-secondary"
+                            className="inline-block pb-4 pr-4 -mb-4 -mr-4 text-glow text-transparent bg-clip-text bg-gradient-to-r from-surlabs-accent via-white to-surlabs-secondary"
                         >
                             crecer tu negocio
                         </motion.span>
