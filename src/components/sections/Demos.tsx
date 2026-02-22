@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Briefcase, ShoppingBag, Palette, Gamepad2, CalendarCheck, Coffee, Image as ImageIcon } from "lucide-react";
 
@@ -10,7 +9,7 @@ const demos = [
         title: "Gestión Comercial y CRM",
         description: "Panel de control técnico para métricas de ventas y operaciones.",
         url: "https://demos.surlabs.tech/ejemplo1",
-        image: "/demos/crm.jpg",
+        image: "/demos/ej1.png",
         icon: Briefcase,
         color: "from-blue-500 to-indigo-600"
     },
@@ -19,7 +18,7 @@ const demos = [
         title: "E-Commerce de Lujo",
         description: "Tienda online elegante enfocada en alta conversión de ventas.",
         url: "https://demos.surlabs.tech/ejemplo2",
-        image: "/demos/ecommerce.jpg",
+        image: "/demos/ej2.png",
         icon: ShoppingBag,
         color: "from-amber-500 to-orange-600"
     },
@@ -28,7 +27,7 @@ const demos = [
         title: "Agencia Creativa",
         description: "Portfolio/Landing page con diseño brutalista y animaciones.",
         url: "https://demos.surlabs.tech/ejemplo3",
-        image: "/demos/agencia.jpg",
+        image: "/demos/ej3.png",
         icon: Palette,
         color: "from-pink-500 to-rose-600"
     },
@@ -37,7 +36,7 @@ const demos = [
         title: "Menú Digital Arcade",
         description: "Menú interactivo con estética retro y animaciones Gamificadas.",
         url: "https://demos.surlabs.tech/ejemplo4",
-        image: "/demos/arcade.jpg",
+        image: "/demos/ej4.png",
         icon: Gamepad2,
         color: "from-purple-500 to-violet-600"
     },
@@ -46,7 +45,7 @@ const demos = [
         title: "Agenda Inteligente",
         description: "Sistema de reservas y calendario optimizado para servicios.",
         url: "https://demos.surlabs.tech/ejemplo5",
-        image: "/demos/agenda.jpg",
+        image: "/demos/ej5.png",
         icon: CalendarCheck,
         color: "from-emerald-500 to-teal-600"
     },
@@ -55,7 +54,7 @@ const demos = [
         title: "Tienda Concepto Gastronómico",
         description: "Landing page interactiva con menú, carrusel y club de beneficios.",
         url: "https://demos.surlabs.tech/ejemplo6",
-        image: "/demos/gastronomia.jpg",
+        image: "/demos/ej6.png",
         icon: Coffee,
         color: "from-orange-500 to-red-600"
     }
@@ -83,17 +82,6 @@ const cardVariants = {
 };
 
 export function Demos() {
-    const [mountedIframes, setMountedIframes] = useState<Record<string, boolean>>({});
-
-    useEffect(() => {
-        // Stagger iframe loading to prevent browser freezing on initial load
-        demos.forEach((demo, index) => {
-            setTimeout(() => {
-                setMountedIframes(prev => ({ ...prev, [demo.id]: true }));
-            }, 1500 + (index * 800)); // First loads after 1.5s, subsequent ones every 800ms
-        });
-    }, []);
-
     return (
         <section id="demos" className="py-24 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
             <motion.div
@@ -134,49 +122,30 @@ export function Demos() {
                             rel="noopener noreferrer"
                             variants={cardVariants}
                             whileHover={{ y: -8 }}
-                            className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 overflow-hidden backdrop-blur-md shadow-lg hover:shadow-[0_0_40px_rgba(0,240,255,0.15)] hover:border-surlabs-accent/30 transition-all duration-300"
+                            className="group flex flex-col rounded-2xl border border-white/10 bg-white/5 overflow-hidden backdrop-blur-md shadow-lg hover:shadow-[0_0_40px_rgba(0,240,255,0.15)] hover:border-surlabs-accent/30 transition-all duration-300 relative h-full"
                         >
-                            <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-900 border-b border-white/10 group-hover:border-surlabs-accent/30 transition-colors duration-300">
-                                {/* Hover overlay */}
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-300 z-30 flex items-center justify-center">
-                                    <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-surlabs-accent text-gray-900 px-6 py-3 rounded-full font-bold flex items-center gap-2 shadow-[0_0_30px_rgba(0,240,255,0.4)]">
-                                        <span>Probar Demo</span>
-                                        <ExternalLink className="w-4 h-4" />
+                            <div className="p-8 flex flex-col h-full relative z-10">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className={`p-3 rounded-xl bg-gradient-to-br ${demo.color} shadow-lg`}>
+                                        <Icon className="w-6 h-6 text-white" />
                                     </div>
-                                </div>
-
-                                {/* Invisible block layer to absolutely guarantee no scroll/touch reaches iframe */}
-                                <div className="absolute inset-0 z-20 bg-transparent" />
-
-                                {/* Actual iframe fixed to not be interactive */}
-                                <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] z-10 bg-white">
-                                    {mountedIframes[demo.id] && (
-                                        <iframe
-                                            src={demo.url}
-                                            className="w-full h-full border-0 pointer-events-none transition-transform duration-700 group-hover:scale-[1.02]"
-                                            title={`Demo de ${demo.title}`}
-                                            tabIndex={-1}
-                                            loading="lazy"
-                                            scrolling="no"
-                                        />
-                                    )}
-                                </div>
-                            </div>
-
-                            <div className="p-6 md:p-8 flex flex-col flex-1 relative bg-gradient-to-t from-black/40 to-transparent">
-                                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                                <div className="flex items-center gap-3 mb-3">
-                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${demo.color} shadow-lg`}>
-                                        <Icon className="w-4 h-4 text-white" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-white group-hover:text-surlabs-accent transition-colors">
+                                    <h3 className="text-2xl font-bold text-white group-hover:text-surlabs-accent transition-colors">
                                         {demo.title}
                                     </h3>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                                <p className="text-gray-400 text-base leading-relaxed flex-1 mb-8">
                                     {demo.description}
                                 </p>
+                                <div className="mt-auto flex items-center justify-between opacity-50 group-hover:opacity-100 transition-opacity">
+                                    <span className="text-sm font-bold text-surlabs-accent uppercase tracking-wider">Explorar Demo</span>
+                                    <div className="w-10 h-10 rounded-full bg-surlabs-accent/10 flex items-center justify-center text-surlabs-accent group-hover:bg-surlabs-accent group-hover:text-gray-900 transition-colors">
+                                        <ExternalLink className="w-4 h-4" />
+                                    </div>
+                                </div>
                             </div>
+
+                            {/* Subtle background glow on hover */}
+                            <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${demo.color} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-500 rounded-full pointer-events-none`} />
                         </motion.a>
                     );
                 })}
