@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Send, MapPin, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 
@@ -16,11 +15,8 @@ export function Contact() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Format the message for WhatsApp
         const text = `Hola soy ${formData.name} de la empresa ${formData.company} y mi problema es:\n${formData.message}\n\n(Detalles extra - Correo: ${formData.email} | Tipo: ${formData.companyType})`;
         const encodedText = encodeURIComponent(text);
-
-        // Phone number should be configured here (without spaces or +)
         const phoneNumber = "59891661552";
 
         window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, '_blank');
@@ -30,35 +26,17 @@ export function Contact() {
         <section id="contacto" className="py-24 px-6 md:px-12 max-w-7xl mx-auto relative">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-full max-h-[600px] aurora-bg opacity-30 blur-3xl -z-10 rounded-full" />
 
-            <div className="mb-16 text-center">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-bold mb-4"
-                >
+            <div className="animate-on-scroll mb-16 text-center">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">
                     Iniciemos tu <span className="text-glow text-surlabs-accent">Proyecto</span>
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="text-foreground/70 max-w-2xl mx-auto text-lg"
-                >
+                </h2>
+                <p className="text-foreground/70 max-w-2xl mx-auto text-lg">
                     Contanos tu idea. Estructuramos soluciones escalables paso a paso para asegurar el éxito técnico de tu producto.
-                </motion.p>
+                </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Contact Info */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="space-y-8"
-                >
+                <div className="animate-on-scroll space-y-8">
                     <div className="glass-panel p-6 md:p-8">
                         <h3 className="text-2xl font-bold mb-6">Información de Contacto</h3>
 
@@ -94,15 +72,9 @@ export function Contact() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
-                {/* Contact Form */}
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                >
+                <div className="animate-on-scroll" style={{ transitionDelay: "150ms" }}>
                     <form onSubmit={handleSubmit} className="glass-panel p-6 md:p-8 space-y-5">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
@@ -194,7 +166,7 @@ export function Contact() {
                             <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
                     </form>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -25,6 +25,9 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${outfit.variable} ${jetbrainsMono.variable} dark`}>
       <body className="antialiased min-h-screen bg-[#0a0a0b] text-[#f8f9fa] aurora-bg">
+        <noscript>
+          <style>{`.animate-on-scroll,.animate-fade-in-up,.animate-fade-in-delayed,.animate-slide-down{opacity:1!important;transform:none!important;animation:none!important}`}</style>
+        </noscript>
         {children}
       </body>
     </html>
