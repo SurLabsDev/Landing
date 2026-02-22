@@ -126,12 +126,15 @@ export function Demos() {
                         >
                             <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-900 border-b border-white/10 group-hover:border-surlabs-accent/30 transition-colors duration-300">
                                 {/* Hover overlay */}
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-300 z-30 flex items-center justify-center pointer-events-none">
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-colors duration-300 z-30 flex items-center justify-center">
                                     <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-surlabs-accent text-gray-900 px-6 py-3 rounded-full font-bold flex items-center gap-2 shadow-[0_0_30px_rgba(0,240,255,0.4)]">
                                         <span>Probar Demo</span>
                                         <ExternalLink className="w-4 h-4" />
                                     </div>
                                 </div>
+
+                                {/* Invisible block layer to absolutely guarantee no scroll/touch reaches iframe */}
+                                <div className="absolute inset-0 z-20 bg-transparent" />
 
                                 {/* Actual iframe fixed to not be interactive */}
                                 <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] z-10 bg-white">
@@ -141,6 +144,7 @@ export function Demos() {
                                         title={`Demo de ${demo.title}`}
                                         tabIndex={-1}
                                         loading="lazy"
+                                        scrolling="no"
                                     />
                                 </div>
                             </div>
