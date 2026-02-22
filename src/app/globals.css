@@ -21,6 +21,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-[var(--background)] text-[var(--foreground)] antialiased selection:bg-surlabs-accent selection:text-surlabs-dark;
     font-feature-settings: "rlig" 1, "calt" 1;

@@ -86,7 +86,7 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <p className="text-sm text-foreground/50 font-mono">Ubicación</p>
-                                    <p className="font-medium">Buenos Aires, Argentina (Remote)</p>
+                                    <p className="font-medium">Montevideo, Uruguay (Remote)</p>
                                 </div>
                             </div>
                         </div>

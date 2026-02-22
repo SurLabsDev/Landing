@@ -34,66 +34,121 @@ const projects = [
     }
 ];
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15,
+            delayChildren: 0.2
+        }
+    }
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: { type: "spring", stiffness: 100, damping: 15 }
+    }
+};
+
 export function Projects() {
     return (
-        <section id="proyectos" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-            <div className="mb-16">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-3xl md:text-5xl font-bold mb-4 text-white"
-                >
-                    Soluciones con <span className="text-transparent bg-clip-text bg-gradient-to-r from-surlabs-secondary to-surlabs-accent text-glow">Impacto Real</span>
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="text-gray-300 max-w-2xl text-lg leading-relaxed"
-                >
-                    No solo escribimos código. Construimos herramientas digitales simples que te ayudan a vender más, optimizar tu tiempo y operar mejor.
-                </motion.p>
-            </div>
+        <section id="proyectos" className="py-24 px-6 md:px-12 max-w-7xl mx-auto relative">
+            <motion.div
+                animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+                transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-surlabs-accent/5 rounded-full blur-[150px] -z-10 pointer-events-none"
+            />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+                className="mb-16"
+            >
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-white tracking-tight">
+                    Soluciones con <span className="text-transparent bg-clip-text bg-gradient-to-r from-surlabs-secondary via-white to-surlabs-accent text-glow">Impacto Real</span>
+                </h2>
+                <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100px" }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="h-1 bg-gradient-to-r from-surlabs-accent to-transparent mb-6"
+                />
+                <p className="text-gray-300 max-w-2xl text-lg leading-relaxed font-medium">
+                    No solo escribimos código. Construimos herramientas digitales simples que te ayudan a vender más, optimizar tu tiempo y operar mejor.
+                </p>
+            </motion.div>
+
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1, duration: 0.5 }}
-                        whileHover={{ y: -5 }}
-                        className="glass-panel p-8 group flex flex-col hover:border-surlabs-accent/30 transition-all shadow-lg hover:shadow-surlabs-accent/5 backdrop-blur-xl bg-white/5"
+                        variants={cardVariants}
+                        whileHover={{
+                            y: -4,
+                            boxShadow: "0 10px 30px -10px rgba(0,240,255,0.1)",
+                            borderColor: "rgba(255,255,255,0.1)"
+                        }}
+                        className="glass-panel p-8 group flex flex-col relative overflow-hidden transition-all duration-300 backdrop-blur-2xl bg-white/5 border-white/5"
                     >
-                        {project.icon}
+                        <div className="absolute inset-0 bg-gradient-to-br from-surlabs-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                        <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-surlabs-accent transition-colors">
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.4 }}
+                            className="relative z-10 mb-6"
+                        >
+                            <div className="absolute inset-0 bg-surlabs-accent/20 blur-xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
+                            <div className="relative z-10 p-3 inline-block bg-white/5 rounded-2xl border border-white/10 group-hover:border-surlabs-accent/50 transition-colors">
+                                {project.icon}
+                            </div>
+                        </motion.div>
+
+                        <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-surlabs-accent transition-colors relative z-10">
                             {project.title}
                         </h3>
-                        <p className="text-gray-400 mb-6 flex-1 text-base leading-relaxed group-hover:text-gray-300 transition-colors">
+                        <p className="text-gray-400 mb-6 flex-1 text-base leading-relaxed group-hover:text-gray-300 transition-colors relative z-10">
                             {project.description}
                         </p>
 
-                        <div className="flex flex-wrap gap-2 mb-8">
-                            {project.tags.map(tag => (
-                                <span key={tag} className="text-xs font-mono px-3 py-1.5 rounded-full bg-black/40 text-gray-300 border border-white/10 group-hover:border-white/20 transition-colors">
+                        <div className="flex flex-wrap gap-2 mb-8 relative z-10">
+                            {project.tags.map((tag, i) => (
+                                <motion.span
+                                    key={tag}
+                                    initial={{ opacity: 0, x: -10 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: index * 0.1 + i * 0.1 }}
+                                    className="text-xs font-mono px-3 py-1.5 rounded-full bg-black/50 text-gray-300 border border-white/5 group-hover:border-surlabs-accent/30 group-hover:text-white transition-colors"
+                                >
                                     {tag}
-                                </span>
+                                </motion.span>
                             ))}
                         </div>
 
-                        <div className="flex items-center gap-4 mt-auto">
-                            <a href="#contacto" className="flex items-center gap-2 text-sm font-semibold text-white hover:text-surlabs-accent transition-colors">
-                                <ExternalLink className="w-4 h-4" />
-                                Consultar por esta solución
+                        <div className="flex items-center gap-4 mt-auto relative z-10">
+                            <a href="#contacto" className="flex items-center gap-2 text-sm font-semibold text-white/70 group-hover:text-surlabs-accent transition-colors">
+                                <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                <span>Consultar por esta solución</span>
                             </a>
                         </div>
+
+                        {/* Edge glow line that moves on hover */}
+                        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-surlabs-accent to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
                     </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 }
