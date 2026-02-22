@@ -17,7 +17,7 @@ export function ScrollAnimator() {
     );
 
     const observe = (root: Element | Document) => {
-      root.querySelectorAll(".animate-on-scroll:not(.in-view)").forEach((el) => {
+      root.querySelectorAll(".animate-on-scroll:not(.in-view), .animate-line-x:not(.in-view), .animate-line-y:not(.in-view)").forEach((el) => {
         io.observe(el);
       });
     };
@@ -28,7 +28,13 @@ export function ScrollAnimator() {
       for (const mutation of mutations) {
         for (const node of mutation.addedNodes) {
           if (node instanceof Element) {
-            if (node.classList.contains("animate-on-scroll")) io.observe(node);
+            if (
+              node.classList.contains("animate-on-scroll") ||
+              node.classList.contains("animate-line-x") ||
+              node.classList.contains("animate-line-y")
+            ) {
+              io.observe(node);
+            }
             observe(node);
           }
         }

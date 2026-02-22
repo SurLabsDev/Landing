@@ -43,12 +43,12 @@ export function Process() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8 relative">
                 {/* Connecting Line (Desktop) */}
                 <div className="hidden lg:block absolute top-[20%] left-0 w-full h-[2px] bg-white/5 -z-10">
-                    <div className="h-full w-full bg-gradient-to-r from-surlabs-accent via-surlabs-secondary to-transparent shadow-[0_0_10px_rgba(0,240,255,0.5)]" />
+                    <div className="animate-line-x h-full w-full bg-gradient-to-r from-surlabs-accent via-surlabs-secondary to-transparent shadow-[0_0_10px_rgba(0,240,255,0.5)]" />
                 </div>
 
                 {/* Connecting Line (Mobile Vertical) */}
                 <div className="block lg:hidden absolute top-[10%] left-4 md:left-[50%] md:-translate-x-1/2 w-[2px] h-[80%] bg-white/5 -z-10">
-                    <div className="h-full w-full bg-gradient-to-b from-surlabs-accent via-surlabs-secondary to-transparent shadow-[0_0_10px_rgba(0,240,255,0.5)]" />
+                    <div className="animate-line-y h-full w-full bg-gradient-to-b from-surlabs-accent via-surlabs-secondary to-transparent shadow-[0_0_10px_rgba(0,240,255,0.5)]" />
                 </div>
 
                 {steps.map((step, index) => (
