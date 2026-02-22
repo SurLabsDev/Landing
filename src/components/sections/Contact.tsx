@@ -56,22 +56,22 @@ export function Contact() {
                     transition={{ duration: 0.5 }}
                     className="space-y-8"
                 >
-                    <div className="glass-panel p-8">
+                    <div className="glass-panel p-6 md:p-8">
                         <h3 className="text-2xl font-bold mb-6">Información de Contacto</h3>
 
                         <div className="space-y-6">
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-lg bg-surlabs-accent/10 flex items-center justify-center text-surlabs-accent border border-surlabs-accent/20">
+                                <div className="w-12 h-12 rounded-lg bg-surlabs-accent/10 flex items-center justify-center text-surlabs-accent border border-surlabs-accent/20 flex-shrink-0">
                                     <Mail className="w-5 h-5" />
                                 </div>
                                 <div>
                                     <p className="text-sm text-foreground/50 font-mono">Email</p>
-                                    <p className="font-medium hover:text-surlabs-accent transition-colors cursor-pointer">hello@surlabs.dev</p>
+                                    <p className="font-medium hover:text-surlabs-accent transition-colors cursor-pointer break-all">hello@surlabs.dev</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-lg bg-surlabs-secondary/10 flex items-center justify-center text-surlabs-secondary border border-surlabs-secondary/20">
+                                <div className="w-12 h-12 rounded-lg bg-surlabs-secondary/10 flex items-center justify-center text-surlabs-secondary border border-surlabs-secondary/20 flex-shrink-0">
                                     <Phone className="w-5 h-5" />
                                 </div>
                                 <div>
@@ -81,7 +81,7 @@ export function Contact() {
                             </div>
 
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-foreground/80 border border-white/10">
+                                <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-foreground/80 border border-white/10 flex-shrink-0">
                                     <MapPin className="w-5 h-5" />
                                 </div>
                                 <div>
@@ -100,7 +100,7 @@ export function Contact() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <form onSubmit={handleSubmit} className="glass-panel p-8 space-y-6">
+                    <form onSubmit={handleSubmit} className="glass-panel p-6 md:p-8 space-y-6">
                         <div>
                             <label htmlFor="name" className="block text-sm font-mono text-foreground/70 mb-2">
                                 01. Nombre

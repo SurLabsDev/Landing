@@ -101,7 +101,7 @@ export function Projects() {
                             boxShadow: "0 10px 30px -10px rgba(0,240,255,0.1)",
                             borderColor: "rgba(255,255,255,0.1)"
                         }}
-                        className="glass-panel p-8 group flex flex-col relative overflow-hidden transition-all duration-300 backdrop-blur-2xl bg-white/5 border-white/5"
+                        className="glass-panel p-6 md:p-8 group flex flex-col relative overflow-hidden transition-all duration-300 backdrop-blur-2xl bg-white/5 border-white/5"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-surlabs-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 

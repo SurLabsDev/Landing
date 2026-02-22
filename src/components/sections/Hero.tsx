@@ -10,7 +10,7 @@ const textRevealVariants = {
         y: 0,
         transition: {
             duration: 0.8,
-            ease: [0.2, 0.65, 0.3, 0.9],
+            ease: "easeOut",
         }
     }
 };
@@ -28,7 +28,7 @@ const containerVariants = {
 
 export function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center pt-28 md:pt-32 pb-20 px-6 overflow-hidden">
             {/* Background Grid Pattern with Parallax feel */}
             <motion.div
                 animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
@@ -83,7 +83,7 @@ export function Hero() {
                     </span>
                 </motion.div>
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white">
+                <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white">
                     <motion.div className="overflow-hidden inline-block align-top">
                         <motion.span variants={textRevealVariants} className="inline-block">Software</motion.span>
                     </motion.div>
@@ -112,7 +112,7 @@ export function Hero() {
 
                 <motion.p
                     variants={textRevealVariants}
-                    className="text-lg md:text-xl text-foreground/70 mb-12 max-w-2xl mx-auto leading-relaxed text-gray-300"
+                    className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed text-gray-300"
                 >
                     Diseñamos, construimos y optimizamos software y automatizaciones para equipos que quieren vender más y operar con claridad. Productos que generan resultados reales.
                 </motion.p>

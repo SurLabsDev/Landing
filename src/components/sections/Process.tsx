@@ -86,7 +86,7 @@ export function Process() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8 relative"
             >
                 {/* Connecting Animated Line (Desktop) */}
                 <div className="hidden lg:block absolute top-[20%] left-0 w-full h-[2px] bg-white/5 -z-10">
@@ -99,41 +99,52 @@ export function Process() {
                     />
                 </div>
 
+                {/* Connecting Animated Line (Mobile Vertical) */}
+                <div className="block lg:hidden absolute top-[10%] left-4 md:left-[50%] md:-translate-x-1/2 w-[2px] h-[80%] bg-white/5 -z-10">
+                    <motion.div
+                        initial={{ scaleY: 0 }}
+                        whileInView={{ scaleY: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+                        className="h-full w-full bg-gradient-to-b from-surlabs-accent via-surlabs-secondary to-transparent origin-top shadow-[0_0_10px_rgba(0,240,255,0.5)]"
+                    />
+                </div>
+
                 {steps.map((step, index) => (
                     <motion.div
                         key={index}
                         variants={stepVariants}
                         whileHover={{ y: -10 }}
-                        className="flex flex-col relative group"
+                        className="flex flex-col relative group pl-8 md:pl-0"
                     >
                         {/* Glowing Number indicator */}
                         <motion.div
                             initial={{ opacity: 0, rotate: -45 }}
                             whileInView={{ opacity: 1, rotate: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.2 + 0.3 }}
-                            className="text-5xl font-black font-mono text-white/5 mb-6 select-none -translate-x-2 group-hover:text-surlabs-accent/20 transition-colors"
+                            className="text-4xl md:text-5xl font-black font-mono text-white/5 mb-4 md:mb-6 select-none -translate-x-2 group-hover:text-surlabs-accent/20 transition-colors"
                         >
                             {step.number}
                         </motion.div>
 
-                        <div className="glass-panel p-8 flex-1 group-hover:border-surlabs-accent/30 transition-all duration-300 backdrop-blur-2xl bg-white/5 border-white/5 shadow-lg group-hover:shadow-[0_0_30px_rgba(0,240,255,0.1)] relative overflow-hidden">
+                        <div className="glass-panel p-6 md:p-8 flex-1 group-hover:border-surlabs-accent/30 transition-all duration-300 backdrop-blur-2xl bg-white/5 border-white/5 shadow-lg group-hover:shadow-[0_0_30px_rgba(0,240,255,0.1)] relative overflow-hidden">
 
                             <motion.div
                                 whileHover={{ scale: 1.1, rotate: 5 }}
-                                className="relative z-10 mb-6 inline-block bg-black/20 p-4 rounded-2xl border border-white/5 group-hover:border-surlabs-accent/20 transition-colors"
+                                className="relative z-10 mb-4 md:mb-6 inline-block bg-black/20 p-3 md:p-4 rounded-2xl border border-white/5 group-hover:border-surlabs-accent/20 transition-colors"
                             >
                                 {step.icon}
                             </motion.div>
 
-                            <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-surlabs-accent transition-colors relative z-10">
+                            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white group-hover:text-surlabs-accent transition-colors relative z-10">
                                 {step.title}
                             </h3>
-                            <p className="text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors relative z-10">
+                            <p className="text-sm md:text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors relative z-10">
                                 {step.description}
                             </p>
 
                             {/* Hover corner accent */}
-                            <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-surlabs-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-full" />
+                            <div className="absolute top-0 right-0 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-bl from-surlabs-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-full" />
                         </div>
                     </motion.div>
                 ))}
