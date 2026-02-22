@@ -83,38 +83,32 @@ export function Hero() {
                 </motion.div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white">
-                    <motion.div className="overflow-visible inline-block align-top">
-                        <motion.span variants={textRevealVariants} className="inline-block">Software</motion.span>
-                    </motion.div>
+                    <div className="overflow-visible inline-block align-top">
+                        <span className="inline-block">Software</span>
+                    </div>
                     {" "}
-                    <motion.div className="overflow-visible inline-block align-top">
-                        <motion.span variants={textRevealVariants} className="inline-block">y</motion.span>
-                    </motion.div>
+                    <div className="overflow-visible inline-block align-top">
+                        <span className="inline-block">y</span>
+                    </div>
                     {" "}
-                    <motion.div className="overflow-visible inline-block align-top">
-                        <motion.span variants={textRevealVariants} className="inline-block">AI</motion.span>
-                    </motion.div>
+                    <div className="overflow-visible inline-block align-top">
+                        <span className="inline-block">AI</span>
+                    </div>
                     {" "}
-                    <motion.div className="overflow-visible inline-block align-top">
-                        <motion.span variants={textRevealVariants} className="inline-block">para</motion.span>
-                    </motion.div>
+                    <div className="overflow-visible inline-block align-top">
+                        <span className="inline-block">para</span>
+                    </div>
                     <br className="hidden md:block" />
-                    <motion.div className="overflow-visible inline-block align-top mt-2">
-                        <motion.span
-                            variants={textRevealVariants}
-                            className="inline-block pb-4 pr-4 -mb-4 -mr-4 text-glow text-transparent bg-clip-text bg-gradient-to-r from-surlabs-accent via-white to-surlabs-secondary"
-                        >
+                    <div className="overflow-visible inline-block align-top mt-2">
+                        <span className="inline-block pb-4 pr-4 -mb-4 -mr-4 text-glow text-transparent bg-clip-text bg-gradient-to-r from-surlabs-accent via-white to-surlabs-secondary">
                             crecer tu negocio
-                        </motion.span>
-                    </motion.div>
+                        </span>
+                    </div>
                 </h1>
 
-                <motion.p
-                    variants={textRevealVariants}
-                    className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed text-gray-300"
-                >
+                <p className="text-base sm:text-lg md:text-xl text-foreground/70 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed text-gray-300">
                     Diseñamos, construimos y optimizamos software y automatizaciones para equipos que quieren vender más y operar con claridad. Productos que generan resultados reales.
-                </motion.p>
+                </p>
 
                 <motion.div
                     variants={textRevealVariants}
