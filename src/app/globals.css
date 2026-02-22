@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-surlabs-dark: #0a0a0b;
+  --color-surlabs-light: #f8f9fa;
+  --color-surlabs-accent: #00f0ff;
+  /* Neon cyan for tech vibe */
+  --color-surlabs-accent-hover: #00c3cf;
+  --color-surlabs-secondary: #7000ff;
+  /* Deep purple */
+
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0b;
+    --foreground: #f8f9fa;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased selection:bg-surlabs-accent selection:text-surlabs-dark;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Gradients and Utilities */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+
+  .bg-grid-white {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23ffffff0a'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  .aurora-bg {
+    background-color: var(--background);
+    background-image: radial-gradient(circle at 50% -20%, rgba(112, 0, 255, 0.15), transparent 60%),
+      radial-gradient(circle at 80% 40%, rgba(0, 240, 255, 0.1), transparent 50%);
+  }
 }

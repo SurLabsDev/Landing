@@ -1,0 +1,13 @@
+quiero hacer una pagina porque quiero abrir una software factory q se llame Surlabs. 
+
+Quiero que tenga un diseño moderno y profesional, con un toque de tecnología y innovación.
+
+la empresa es una startup compuesto por 2 personas, ambos estudiantes de lic en informatica con la tesis aprobada. pero si vas a la pagina no quiero que se note eso, quiero que se vea como una empresa seria y consolidada. 
+
+en la pagina quiero q tenga una parte donde mostramos nuestros proyectos ya realizados, en esta parte quiero que se muestren los proyectos en forma de tarjetas, con una imagen, un titulo, una descripcion y un boton de "ver proyecto".
+
+quiero q tenga un formulario de contacto donde los usuarios nos puedan escribir por wpp. 
+
+arrancamos con eso. hacela en react. la vamos a subir a vercel 
+
+usa las skill de react para hacerla. y de desarrollo frontend. no usese emojis, usa la skill de iconos q tenes 
