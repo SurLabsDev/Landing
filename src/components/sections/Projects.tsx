@@ -108,10 +108,10 @@ export function Projects() {
                         <motion.div
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.4 }}
-                            className="relative z-10 mb-6"
+                            className="relative z-10 mb-4 inline-block"
                         >
-                            <div className="absolute inset-0 bg-surlabs-accent/20 blur-xl rounded-full scale-0 group-hover:scale-150 transition-transform duration-500" />
-                            <div className="relative z-10 p-3 inline-block bg-white/5 rounded-2xl border border-white/10 group-hover:border-surlabs-accent/50 transition-colors">
+                            <div className="absolute inset-0 bg-surlabs-accent/20 blur-xl rounded-full scale-0 group-hover:scale-125 transition-transform duration-500" />
+                            <div className="relative z-10">
                                 {project.icon}
                             </div>
                         </motion.div>
