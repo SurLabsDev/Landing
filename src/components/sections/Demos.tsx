@@ -1,4 +1,4 @@
-import { ExternalLink, Briefcase, ShoppingBag, Palette, Gamepad2, CalendarCheck, Coffee } from "lucide-react";
+import { ExternalLink, Briefcase, ShoppingBag, Palette, Gamepad2, CalendarCheck, Coffee, Bot, Building2, Rocket, Heart } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface Demo {
@@ -58,6 +58,38 @@ const demos: Demo[] = [
         url: "https://demos.surlabs.tech/ejemplo6",
         icon: Coffee,
         color: "from-orange-500 to-red-600"
+    },
+    {
+        id: "ejemplo7",
+        title: "Dashboard de IA y Automatización",
+        description: "Centro de operaciones con asistente AI, workflows y métricas en vivo.",
+        url: "https://demos.surlabs.tech/ejemplo7",
+        icon: Bot,
+        color: "from-cyan-500 to-blue-600"
+    },
+    {
+        id: "ejemplo8",
+        title: "Portal Inmobiliario",
+        description: "Plataforma de propiedades con filtros, favoritos y galería interactiva.",
+        url: "https://demos.surlabs.tech/ejemplo8",
+        icon: Building2,
+        color: "from-emerald-600 to-green-700"
+    },
+    {
+        id: "ejemplo9",
+        title: "SaaS Landing Page",
+        description: "Landing de alta conversión con pricing, features y testimonios.",
+        url: "https://demos.surlabs.tech/ejemplo9",
+        icon: Rocket,
+        color: "from-indigo-500 to-violet-600"
+    },
+    {
+        id: "ejemplo10",
+        title: "App de Fitness & Wellness",
+        description: "Interfaz mobile-first con rutinas, métricas y charts de actividad.",
+        url: "https://demos.surlabs.tech/ejemplo10",
+        icon: Heart,
+        color: "from-rose-500 to-pink-600"
     }
 ];
 
