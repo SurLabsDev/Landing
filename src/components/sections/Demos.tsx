@@ -1,4 +1,4 @@
-import { ExternalLink, Briefcase, ShoppingBag, Palette, Gamepad2, CalendarCheck, Coffee, Bot, Building2, Rocket, Heart } from "lucide-react";
+import { ExternalLink, Briefcase, ShoppingBag, Palette, Gamepad2, CalendarCheck, Coffee, Bot, Building2, Rocket, Heart, GraduationCap, Utensils } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface Demo {
@@ -90,6 +90,22 @@ const demos: Demo[] = [
         url: "https://demos.surlabs.tech/ejemplo10",
         icon: Heart,
         color: "from-rose-500 to-pink-600"
+    },
+    {
+        id: "ejemplo11",
+        title: "Plataforma E-Learning",
+        description: "Campus virtual con cursos, progreso, gamificación y contenido interactivo.",
+        url: "https://demos.surlabs.tech/ejemplo11",
+        icon: GraduationCap,
+        color: "from-violet-500 to-purple-600"
+    },
+    {
+        id: "ejemplo12",
+        title: "Restaurante Fine Dining",
+        description: "Carta digital elegante con categorías, reseñas y sistema de reservas.",
+        url: "https://demos.surlabs.tech/ejemplo12",
+        icon: Utensils,
+        color: "from-amber-600 to-orange-700"
     }
 ];
 
