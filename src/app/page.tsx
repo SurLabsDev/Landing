@@ -1,23 +1,21 @@
 import { Header } from "@/components/ui/Header";
 import { Hero } from "@/components/sections/Hero";
-import { Projects } from "@/components/sections/Projects";
-import { Demos } from "@/components/sections/Demos";
+import { Work } from "@/components/sections/Work";
+import { Services } from "@/components/sections/Services";
 import { Process } from "@/components/sections/Process";
+import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/ui/Footer";
 import { ScrollAnimator } from "@/components/ui/ScrollAnimator";
-import dynamic from "next/dynamic";
-
-const Contact = dynamic(() => import("@/components/sections/Contact").then((mod) => mod.Contact));
 
 export default function Home() {
   return (
     <>
       <ScrollAnimator />
       <Header />
-      <main className="flex flex-col">
+      <main id="contenido" className="flex flex-col">
         <Hero />
-        <Projects />
-        <Demos />
+        <Work />
+        <Services />
         <Process />
         <Contact />
       </main>

@@ -1,55 +1,60 @@
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 
+/**
+ * Hero tipográfico, sin imagen.
+ *
+ * Ocupa la pantalla completa (100dvh) para que la sección siguiente no asome
+ * por abajo: ese pedacito de titular cortado le sacaba seriedad.
+ *
+ * Ahora bien, ocupar la pantalla entera con un bloque compacto centrado fue lo
+ * que antes se leía como "sobra espacio". Por eso el contenido NO va centrado:
+ * se reparte a lo alto a propósito, con el titular arriba y la línea, el texto
+ * y los botones anclados abajo. El aire queda entre dos bloques anclados, que
+ * es composición editorial, y no alrededor de uno flotando, que es un error.
+ *
+ * Sin imagen sobre la línea de flotación el LCP pasa a ser el texto, que es lo
+ * más rápido que puede pintar un navegador.
+ */
 export function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-28 md:pt-32 pb-20 px-6 overflow-hidden">
-            <div className="absolute inset-0 bg-grid-white bg-[length:32px_32px] opacity-10 [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]" />
-
-            <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-surlabs-accent/20 rounded-full blur-[128px] -z-10 animate-blob" />
-            <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-surlabs-secondary/20 rounded-full blur-[128px] -z-10 animate-blob-alt" />
-
-            <div className="relative z-10 max-w-5xl mx-auto text-center animate-fade-in-up">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-surlabs-accent/30 glass-panel text-xs md:text-sm mb-8 font-mono shadow-[0_0_15px_rgba(0,240,255,0.2)]">
-                    <span className="flex h-2 w-2 rounded-full bg-surlabs-accent animate-pulse relative">
-                        <span className="absolute inset-0 rounded-full bg-surlabs-accent animate-ping opacity-75"></span>
-                    </span>
-                    <span className="text-white">
-                        No solo código: priorizamos impacto y velocidad.
-                    </span>
-                </div>
-
-                <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white">
-                    Software y AI para
-                    <br className="hidden md:block" />
-                    <span className="inline-block mt-2 pb-4 pr-4 -mb-4 -mr-4 text-glow text-transparent bg-clip-text bg-gradient-to-r from-surlabs-accent via-white to-surlabs-secondary">
-                        crecer tu negocio
-                    </span>
+        <section className="relative flex min-h-[100dvh] flex-col overflow-hidden pt-[68px]">
+            <div className="mx-auto flex w-full max-w-[1400px] flex-1 flex-col justify-between gap-12 px-5 pb-14 pt-12 md:px-10 lg:pb-20 lg:pt-16">
+                {/* El ancho está calibrado para que entre en 2 líneas en desktop. */}
+                <h1 className="animate-rise type-display-tight max-w-[24ch] text-[3.25rem] font-extrabold sm:text-6xl lg:text-[5.25rem] xl:text-[6.5rem]">
+                    El software que tu negocio todavía hace{" "}
+                    <span className="text-ember">a mano</span>.
                 </h1>
 
-                <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed text-gray-300">
-                    Diseñamos, construimos y optimizamos software y automatizaciones para equipos que quieren vender más y operar con claridad. Productos que generan resultados reales.
-                </p>
+                <div className="animate-rise" style={{ animationDelay: "140ms" }}>
+                    {/* Línea de acento: separa los dos bloques anclados. */}
+                    <div className="animate-line-x h-px w-full max-w-[38rem] origin-left bg-ember" />
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a
-                        href="#contacto"
-                        className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-bold transition-all duration-200 flex items-center justify-center gap-2 group hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] active:scale-95"
-                    >
-                        Diagnóstico gratis
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <a
-                        href="#proyectos"
-                        className="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-white border border-white/10 font-semibold transition-all duration-200 hover:scale-105 hover:border-surlabs-accent/50 hover:bg-white/10 active:scale-95"
-                    >
-                        Ver soluciones
-                    </a>
+                    <p className="type-body mt-8 max-w-[52ch] text-lg leading-relaxed text-bone-dim lg:text-xl">
+                        Diseñamos y construimos las herramientas que tu equipo usa todos los
+                        días. Reservas, pedidos, clientes y stock.
+                    </p>
+
+                    <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                        <Link
+                            href="#contacto"
+                            className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-brand bg-ember px-8 py-4 text-base font-bold text-ink transition-colors hover:bg-ember-hot active:translate-y-px"
+                        >
+                            Hablemos
+                            <ArrowRight
+                                size={18}
+                                weight="bold"
+                                className="transition-transform duration-300 group-hover:translate-x-1"
+                            />
+                        </Link>
+                        <Link
+                            href="#proyectos"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-brand border border-bone/25 px-8 py-4 text-base font-semibold text-bone transition-colors hover:border-bone/60 hover:bg-bone/5 active:translate-y-px"
+                        >
+                            Ver el trabajo
+                        </Link>
+                    </div>
                 </div>
-            </div>
-
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in-delayed">
-                <span className="text-[10px] uppercase tracking-widest text-gray-500 font-mono">Scroll</span>
-                <div className="w-px h-12 bg-gradient-to-b from-gray-500 to-transparent animate-scroll-bounce" />
             </div>
         </section>
     );

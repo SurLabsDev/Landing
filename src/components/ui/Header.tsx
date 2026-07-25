@@ -1,92 +1,124 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Terminal, Menu, X } from "lucide-react";
+import { List, X } from "@phosphor-icons/react/dist/ssr";
+import { Logo } from "@/components/brand/Logo";
+
+const nav = [
+    { href: "#proyectos", label: "Trabajo" },
+    { href: "#servicios", label: "Servicios" },
+    { href: "#metodologia", label: "Proceso" },
+];
 
 export function Header() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const sentinel = useRef<HTMLDivElement>(null);
 
-    const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+    /**
+     * El fondo del header aparece cuando el visitante deja atrás el tope de la
+     * página. Se detecta observando un div centinela, nunca escuchando scroll:
+     * un listener de scroll corre en cada frame y genera jank.
+     */
+    useEffect(() => {
+        const el = sentinel.current;
+        if (!el) return;
+        const io = new IntersectionObserver(
+            ([entry]) => setScrolled(!entry.isIntersecting),
+            { threshold: 0 }
+        );
+        io.observe(el);
+        return () => io.disconnect();
+    }, []);
+
+    // Con el menú abierto en mobile el fondo no debe scrollear.
+    useEffect(() => {
+        document.body.style.overflow = open ? "hidden" : "";
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [open]);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 flex flex-col px-6 py-4 md:px-12 glass-panel m-4 mt-6 mx-auto max-w-7xl overflow-hidden md:overflow-visible animate-slide-down">
-            <div className="flex items-center justify-between w-full">
-                <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsMobileMenuOpen(false)}>
-                    <div className="bg-surlabs-dark/50 p-2 rounded-lg border border-surlabs-accent/30 group-hover:border-surlabs-accent transition-colors">
-                        <Terminal className="w-5 h-5 lg:w-6 lg:h-6 text-surlabs-accent" />
-                    </div>
-                    <span className="font-mono font-bold text-lg lg:text-xl tracking-tighter">
-                        SUR<span className="text-surlabs-accent">LABS</span>
-                    </span>
-                </Link>
+        <>
+            <div ref={sentinel} aria-hidden="true" className="absolute top-0 h-px w-full" />
 
-                <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <Link href="#proyectos" className="hover:text-surlabs-accent transition-colors">
-                        Proyectos
-                    </Link>
-                    <Link href="#metodologia" className="hover:text-surlabs-accent transition-colors">
-                        Metodología
-                    </Link>
-                    <Link href="#contacto" className="hover:text-surlabs-accent transition-colors">
-                        Contacto
-                    </Link>
-                </nav>
-
-                <div className="hidden md:block">
-                    <a
-                        href="#contacto"
-                        className="px-5 py-2.5 rounded-lg bg-surlabs-accent text-surlabs-dark font-medium text-sm hover:bg-surlabs-accent-hover hover:scale-105 active:scale-95 transition-all shadow-[0_0_15px_rgba(0,240,255,0.3)]"
-                    >
-                        Iniciá tu proyecto
-                    </a>
-                </div>
-
-                <button
-                    onClick={toggleMenu}
-                    className="md:hidden p-2 text-white hover:text-surlabs-accent transition-colors border border-white/10 rounded-lg bg-white/5"
-                    aria-label="Toggle mobile menu"
-                >
-                    {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                </button>
-            </div>
-
-            <div
-                className={`md:hidden grid transition-[grid-template-rows] duration-300 ease-in-out ${isMobileMenuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+            <header
+                className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+                    scrolled || open
+                        ? "border-b border-bone/10 bg-ink/95 backdrop-blur-sm"
+                        : "border-b border-transparent"
+                }`}
             >
-                <div className="overflow-hidden">
-                    <nav className="flex flex-col gap-4 pt-6 pb-2 text-base font-medium border-t border-white/10 mt-4">
-                        <Link
-                            href="#proyectos"
-                            onClick={toggleMenu}
-                            className="hover:text-surlabs-accent transition-colors py-2 px-2 rounded-lg hover:bg-white/5"
-                        >
-                            Proyectos
-                        </Link>
-                        <Link
-                            href="#metodologia"
-                            onClick={toggleMenu}
-                            className="hover:text-surlabs-accent transition-colors py-2 px-2 rounded-lg hover:bg-white/5"
-                        >
-                            Metodología
-                        </Link>
+                {/* Altura contenida: 68px en desktop, muy por debajo del techo de 80px. */}
+                <div className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between px-5 md:px-10">
+                    <Link
+                        href="/"
+                        aria-label="Surlabs, inicio"
+                        onClick={() => setOpen(false)}
+                        className="shrink-0"
+                    >
+                        <Logo />
+                    </Link>
+
+                    <nav className="hidden items-center gap-9 md:flex">
+                        {nav.map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className="link-underline text-[0.9375rem] font-medium text-bone-dim transition-colors hover:text-bone"
+                            >
+                                {item.label}
+                            </Link>
+                        ))}
                         <Link
                             href="#contacto"
-                            onClick={toggleMenu}
-                            className="hover:text-surlabs-accent transition-colors py-2 px-2 rounded-lg hover:bg-white/5"
+                            className="rounded-brand bg-ember px-5 py-2.5 text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-ember-hot active:translate-y-px"
                         >
-                            Contacto
+                            Hablemos
                         </Link>
-                        <a
-                            href="#contacto"
-                            onClick={toggleMenu}
-                            className="mt-2 w-full text-center px-5 py-3 rounded-lg bg-surlabs-accent text-surlabs-dark font-bold text-sm shadow-[0_0_15px_rgba(0,240,255,0.3)] active:scale-95 transition-transform"
-                        >
-                            Iniciá tu proyecto
-                        </a>
                     </nav>
+
+                    <button
+                        type="button"
+                        onClick={() => setOpen((v) => !v)}
+                        aria-label={open ? "Cerrar menú" : "Abrir menú"}
+                        aria-expanded={open}
+                        aria-controls="menu-mobile"
+                        className="rounded-brand -mr-2 p-2 text-bone md:hidden"
+                    >
+                        {open ? <X size={26} weight="bold" /> : <List size={26} weight="bold" />}
+                    </button>
                 </div>
+            </header>
+
+            {/* Menú mobile a pantalla completa. En desktop no existe. */}
+            <div
+                id="menu-mobile"
+                hidden={!open}
+                className="fixed inset-0 z-40 flex flex-col justify-center bg-ink px-5 pt-[68px] md:hidden"
+            >
+                <nav className="flex flex-col">
+                    {nav.map((item) => (
+                        <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setOpen(false)}
+                            className="type-display border-b border-bone/10 py-6 text-4xl font-extrabold text-bone"
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
+                </nav>
+                <Link
+                    href="#contacto"
+                    onClick={() => setOpen(false)}
+                    className="rounded-brand mt-10 bg-ember px-6 py-5 text-center text-lg font-bold text-ink"
+                >
+                    Hablemos
+                </Link>
             </div>
-        </header>
+        </>
     );
 }

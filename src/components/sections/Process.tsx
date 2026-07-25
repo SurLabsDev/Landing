@@ -1,84 +1,94 @@
-import { Search, PenTool, Braces, Rocket } from "lucide-react";
+import {
+    MagnifyingGlass,
+    PenNib,
+    Code,
+    Lifebuoy,
+} from "@phosphor-icons/react/dist/ssr";
 
+/**
+ * Sin cards y sin numerar los pasos: el verbo ya dice en qué etapa estás.
+ * Familia de layout propia (línea horizontal con hitos), distinta del bento
+ * de servicios y de la galería.
+ */
 const steps = [
     {
-        number: "01",
-        title: "Discovery",
-        description: "Analizamos tu proceso actual para entender el problema real y definir métricas de éxito (vender más, ahorrar tiempo).",
-        icon: <Search className="w-8 h-8 text-surlabs-accent mb-4" />
+        title: "Entendemos el problema",
+        body: "Miramos cómo trabajás hoy para encontrar dónde se te va el tiempo y acordar qué significa que esto salga bien.",
+        icon: MagnifyingGlass,
     },
     {
-        number: "02",
-        title: "Propuesta",
-        description: "Diseñamos un alcance ágil. Sin humo. Definimos tiempos, costos y el impacto esperado en tu operación comercial.",
-        icon: <PenTool className="w-8 h-8 text-gray-400 mb-4" />
+        title: "Te pasamos el alcance",
+        body: "Qué se hace, cuánto sale y cuándo está. Por escrito y antes de empezar.",
+        icon: PenNib,
     },
     {
-        number: "03",
-        title: "Construcción",
-        description: "Ejecutamos con tecnología robusta y diseño centrado en el usuario final. Iteramos rápido y lanzamos una v1 que aporte valor inmediato.",
-        icon: <Braces className="w-8 h-8 text-gray-400 mb-4" />
+        title: "Construimos",
+        body: "Lanzamos una primera versión que ya te sirva y la vamos ajustando con vos usándola.",
+        icon: Code,
     },
     {
-        number: "04",
-        title: "Soporte y Evolución",
-        description: "Monitoreo, correcciones y mejoras continuas. Nos convertimos en tu brazo técnico para que te enfoques en tu negocio.",
-        icon: <Rocket className="w-8 h-8 text-surlabs-secondary mb-4" />
-    }
+        title: "Te acompañamos",
+        body: "Correcciones, mejoras y cambios cuando el negocio los pide. Somos tu brazo técnico.",
+        icon: Lifebuoy,
+    },
 ];
 
 export function Process() {
     return (
-        <section id="metodologia" className="py-24 px-6 md:px-12 max-w-7xl mx-auto relative overflow-hidden">
-            <div className="animate-on-scroll mb-20 text-center md:text-left">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-white tracking-tight">
-                    Cómo <span className="text-glow text-transparent bg-clip-text bg-gradient-to-r from-surlabs-accent to-white">Trabajamos</span>
-                </h2>
-                <div className="h-1 w-[100px] bg-surlabs-accent mb-6 mx-auto md:mx-0 shadow-[0_0_15px_rgba(0,240,255,0.5)]" />
-                <p className="text-gray-300 max-w-2xl text-lg leading-relaxed font-medium mx-auto md:mx-0">
-                    Discovery claro, ejecución ágil, y foco en los resultados de tu negocio.
-                </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8 relative">
-                {/* Connecting Line (Desktop) */}
-                <div className="hidden lg:block absolute top-[20%] left-0 w-full h-[2px] bg-white/5 -z-10">
-                    <div className="animate-line-x h-full w-full bg-gradient-to-r from-surlabs-accent via-surlabs-secondary to-transparent shadow-[0_0_10px_rgba(0,240,255,0.5)]" />
+        <section
+            id="metodologia"
+            className="border-t border-bone/12 bg-ink-sunken py-24 lg:py-32"
+        >
+            <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+                <div className="animate-on-scroll">
+                    <h2 className="type-display max-w-[18ch] text-[2.75rem] font-extrabold sm:text-5xl lg:text-6xl">
+                        Cómo trabajamos.
+                    </h2>
+                    <p className="type-body mt-6 max-w-[58ch] text-base leading-relaxed text-bone-dim lg:text-lg">
+                        Cuatro etapas, sin sorpresas en el medio. Vas a saber siempre en cuál
+                        estamos.
+                    </p>
                 </div>
 
-                {/* Connecting Line (Mobile Vertical) */}
-                <div className="block lg:hidden absolute top-[10%] left-4 md:left-[50%] md:-translate-x-1/2 w-[2px] h-[80%] bg-white/5 -z-10">
-                    <div className="animate-line-y h-full w-full bg-gradient-to-b from-surlabs-accent via-surlabs-secondary to-transparent shadow-[0_0_10px_rgba(0,240,255,0.5)]" />
-                </div>
-
-                {steps.map((step, index) => (
-                    <div
-                        key={index}
-                        className="animate-on-scroll"
-                        style={{ transitionDelay: `${index * 120}ms` }}
-                    >
-                        <div className="flex flex-col relative group pl-8 md:pl-0 h-full">
-                            <div className="text-4xl md:text-5xl font-black font-mono text-white/5 mb-4 md:mb-6 select-none -translate-x-2 group-hover:text-surlabs-accent/20 transition-colors">
-                                {step.number}
-                            </div>
-
-                            <div className="glass-panel p-6 md:p-8 flex-1 group-hover:border-surlabs-accent/30 transition-all duration-300 bg-white/5 border-white/5 shadow-lg group-hover:shadow-[0_0_30px_rgba(0,240,255,0.1)] relative overflow-hidden hover:-translate-y-2">
-                                <div className="relative z-10 mb-4 md:mb-6 inline-block bg-black/20 p-3 md:p-4 rounded-2xl border border-white/5 group-hover:border-surlabs-accent/20 transition-colors">
-                                    {step.icon}
-                                </div>
-
-                                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white group-hover:text-surlabs-accent transition-colors relative z-10">
-                                    {step.title}
-                                </h3>
-                                <p className="text-sm md:text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors relative z-10">
-                                    {step.description}
-                                </p>
-
-                                <div className="absolute top-0 right-0 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-bl from-surlabs-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-full" />
-                            </div>
-                        </div>
+                <div className="relative mt-20">
+                    {/* Hilo que conecta las etapas. Se dibuja al entrar en pantalla. */}
+                    <div className="absolute left-0 top-[15px] hidden h-px w-full bg-bone/12 lg:block">
+                        <div className="animate-line-x h-full w-full origin-left bg-ember" />
                     </div>
-                ))}
+                    <div className="absolute left-[15px] top-0 h-full w-px bg-bone/12 lg:hidden">
+                        <div className="animate-line-y h-full w-full origin-top bg-ember" />
+                    </div>
+
+                    <ol className="grid grid-cols-1 gap-14 lg:grid-cols-4 lg:gap-10">
+                        {steps.map((step, i) => {
+                            const Icon = step.icon;
+                            return (
+                                <li
+                                    key={step.title}
+                                    className="animate-on-scroll relative pl-14 lg:pl-0"
+                                    style={{ transitionDelay: `${i * 110}ms` }}
+                                >
+                                    {/* Hito sobre el hilo. Lleva el fondo para tapar la línea. */}
+                                    <div className="absolute left-0 top-0 flex h-[31px] w-[31px] items-center justify-center bg-ink-sunken lg:relative">
+                                        <Icon
+                                            size={26}
+                                            weight="light"
+                                            className="text-ember"
+                                            aria-hidden="true"
+                                        />
+                                    </div>
+
+                                    <h3 className="type-display mt-0 text-xl font-bold lg:mt-8 lg:text-2xl">
+                                        {step.title}
+                                    </h3>
+                                    <p className="type-body mt-3 max-w-[34ch] text-[0.9375rem] leading-relaxed text-bone-dim">
+                                        {step.body}
+                                    </p>
+                                </li>
+                            );
+                        })}
+                    </ol>
+                </div>
             </div>
         </section>
     );

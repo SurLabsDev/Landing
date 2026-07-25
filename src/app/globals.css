@@ -1,114 +1,121 @@
 @import "tailwindcss";
 
+/* =========================================================================
+   SURLABS DESIGN SYSTEM
+   Paleta: negro cálido + crema + UN acento naranja ladrillo.
+   Radio: 0 en todo. Nada se redondea salvo formas que son círculos por
+   definición (el disco del logo). Es la regla, no una casualidad.
+   ========================================================================= */
+
 @theme {
-  --color-surlabs-dark: #0a0a0b;
-  --color-surlabs-light: #f8f9fa;
-  --color-surlabs-accent: #00f0ff;
-  /* Neon cyan for tech vibe */
-  --color-surlabs-accent-hover: #00c3cf;
-  --color-surlabs-secondary: #7000ff;
-  /* Deep purple */
+  /* Superficies. Nunca #000: el negro es cálido, tira a marrón. */
+  --color-ink: #0d0c0b;
+  --color-ink-raised: #171512;
+  --color-ink-sunken: #080807;
 
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
+  /* Texto. Nunca #fff. */
+  --color-bone: #f0ebe3;
+  --color-bone-dim: #a39c91;
+  --color-bone-faint: #6b665e;
 
-@layer base {
-  :root {
-    --background: #0a0a0b;
-    --foreground: #f8f9fa;
-  }
+  /* Acento único de toda la página. */
+  --color-ember: #e4571b;
+  --color-ember-hot: #ff6a2b;
+
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /*
+    Un solo radio para todo el sitio: botones, tarjetas, inputs e imágenes.
+    Se usa como `rounded-brand`. Si algún día hay que ablandar o endurecer
+    la página entera, se cambia acá y en ningún otro lado.
+    Los círculos (el disco del logo) quedan fuera: son círculos, no
+    rectángulos redondeados.
+  */
+  --radius-brand: 6px;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Reserva para el header fijo cuando se salta a un anchor. */
+    scroll-padding-top: 6rem;
   }
 
   body {
-    @apply bg-[var(--background)] text-[var(--foreground)] antialiased selection:bg-surlabs-accent selection:text-surlabs-dark;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: var(--color-ink);
+    color: var(--color-bone);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01" 1, "calt" 1;
+  }
+
+  ::selection {
+    background-color: var(--color-ember);
+    color: var(--color-bone);
+  }
+
+  /* Un solo estilo de foco para todo el sitio, visible sobre fondo oscuro. */
+  :focus-visible {
+    outline: 2px solid var(--color-ember);
+    outline-offset: 2px;
   }
 }
 
-/* Keyframes */
-@keyframes blob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -30px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
-}
-
-@keyframes blob-alt {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-30px, 20px) scale(1.15); }
-  66% { transform: translate(20px, -30px) scale(0.9); }
-}
-
-@keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slide-down {
-  from { opacity: 0; transform: translateY(-100px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scroll-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-/* Custom Gradients and Utilities */
 @layer utilities {
-  .text-glow {
-    text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  /* ---------------------------------------------------------------------
+     Tipografía display. Bricolage es variable: el eje de ancho (wdth) es
+     lo que le da carácter, así que los titulares van condensados y el
+     cuerpo en ancho normal.
+     --------------------------------------------------------------------- */
+  .type-display {
+    font-variation-settings: "wdth" 85, "opsz" 48;
+    letter-spacing: -0.035em;
+    line-height: 0.92;
+    text-wrap: balance;
   }
 
-  .bg-grid-white {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23ffffff0a'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  .type-display-tight {
+    font-variation-settings: "wdth" 75, "opsz" 48;
+    letter-spacing: -0.045em;
+    line-height: 0.88;
   }
 
-  .glass-panel {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  .type-body {
+    font-variation-settings: "wdth" 100, "opsz" 14;
+    text-wrap: pretty;
   }
 
-  .aurora-bg {
-    background-color: var(--background);
-    background-image: radial-gradient(circle at 50% -20%, rgba(112, 0, 255, 0.15), transparent 60%),
-      radial-gradient(circle at 80% 40%, rgba(0, 240, 255, 0.1), transparent 50%);
+  /* Etiqueta mono chica. Uso racionado: la skill permite pocas por página. */
+  .type-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
-  .animate-blob {
-    animation: blob 10s ease-in-out infinite;
-    will-change: transform;
+  /* ---------------------------------------------------------------------
+     Grano. Fijo y pointer-events-none: nunca sobre un contenedor que
+     scrollea, porque repinta la GPU en cada frame y mata el FPS en mobile.
+     --------------------------------------------------------------------- */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  .animate-blob-alt {
-    animation: blob-alt 15s ease-in-out 2s infinite;
-    will-change: transform;
-  }
-
-  .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease both;
-  }
-
-  .animate-fade-in-delayed {
-    animation: fade-in-up 0.8s ease 1.5s both;
-  }
-
-  .animate-slide-down {
-    animation: slide-down 0.8s ease-out both;
-  }
-
-  .animate-scroll-bounce {
-    animation: scroll-bounce 1.5s ease-in-out infinite;
-  }
-
+  /* ---------------------------------------------------------------------
+     Revelado al scrollear. Lo maneja ScrollAnimator agregando .in-view.
+     Solo transform y opacity: nunca top/left/width/height.
+     --------------------------------------------------------------------- */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-on-scroll.in-view {
@@ -119,7 +126,7 @@
   .animate-line-x {
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 1.2s ease-in-out;
+    transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-line-x.in-view {
@@ -129,10 +136,109 @@
   .animate-line-y {
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 1.2s ease-in-out;
+    transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-line-y.in-view {
     transform: scaleY(1);
+  }
+
+  /* Entrada del hero: no espera al scroll, arranca sola. */
+  .animate-rise {
+    animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* ---------------------------------------------------------------------
+     Riel horizontal de la galería. Se oculta la barra nativa porque la
+     sección ya tiene dos señales propias de avance: la barra de progreso
+     y las flechas. Sin esas dos, ocultarla sería quitarle una pista al
+     usuario y no habría que hacerlo.
+     --------------------------------------------------------------------- */
+  .track-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-padding-left: 1.25rem;
+  }
+
+  .track-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .track-scroll {
+      scroll-padding-left: 2.5rem;
+    }
+  }
+
+  /* ---------------------------------------------------------------------
+     Subrayado que se dibuja al hacer hover. Sustituye al glow neón:
+     comunica lo mismo sin el tell de IA.
+     --------------------------------------------------------------------- */
+  .link-underline {
+    background-image: linear-gradient(var(--color-ember), var(--color-ember));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    transition: background-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* La aguja del logo busca el sur al hacer hover sobre la marca. */
+@keyframes needle-settle {
+  0% { transform: rotate(-14deg); }
+  55% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.group:hover .needle {
+  animation: needle-settle 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================================================================
+   Reducción de movimiento. Obligatorio con MOTION_INTENSITY 8.
+   Todo colapsa a estático e instantáneo, nada queda invisible.
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  .track-scroll {
+    scroll-behavior: auto;
+  }
+
+  .animate-on-scroll,
+  .animate-line-x,
+  .animate-line-y {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .group:hover .needle {
+    animation: none;
+  }
+
+  .link-underline {
+    transition: none;
   }
 }
