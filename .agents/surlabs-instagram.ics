@@ -1,0 +1,260 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Surlabs//Calendario de publicacion//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Surlabs · Instagram
+X-WR-TIMEZONE:America/Montevideo
+BEGIN:VTIMEZONE
+TZID:America/Montevideo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+TZNAME:-03
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:surlabs-perfil@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260727T190000
+DTEND;TZID=America/Montevideo:20260727T192000
+SUMMARY:Poner el perfil de Instagram a punto
+LOCATION:instagram.com/surlabs.tech
+DESCRIPTION:Se hace una sola vez y rinde más que cualquier posteo.\n\nCAMP
+ O NOMBRE (el de abajo del usuario\, lo indexa el buscador de Instagram):\n
+ Surlabs · Software para pymes\n\nBIO:\nConstruimos el software que tu neg
+ ocio todavía hace a mano.\nReservas · Cartas digitales · Catálogos · 
+ Gestión\nMontevideo\, UY\nProbá 12 productos funcionando ↓\n\nENLACE: 
+ https://surlabs.tech\nCATEGORÍA: Servicio de desarrollo de software\nBOT
+ ÓN DE CONTACTO: WhatsApp al +598 91 661 552\n\nFOTO DE PERFIL:\n/Users/co
+ ru/Desktop/Proyectos/surlabs-social/marca/salida/avatar.png\n\nDetalle com
+ pleto en .agents/instagram-calendario.md
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Poner el perfil de Instagram a punto
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-1@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260728T203000
+DTEND;TZID=America/Montevideo:20260728T205500
+SUMMARY:1/6 · Reel general · FIJAR ARRIBA DEL PERFIL
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Reel vertical\, 20 segundos\n\nARCHIVO:\n/Users/coru/D
+ esktop/Proyectos/surlabs-social/videos/surlabs-reel-general/renders/video.
+ mp4\n\nIMPORTANTE: apenas se publique\, FIJALO arriba del perfil. Es lo pr
+ imero que ve quien entra.\n\nTEXTO EN PANTALLA (primeros 3 segundos):\nalg
+ o de tu negocio lo estás haciendo A MANO\n\nCAPTION:\nNo tenemos portfoli
+ o de capturas lindas. Tenemos 12 productos funcionando que podés usar aho
+ ra mismo.\n\nGastronomía\, turnos\, comercio\, inmobiliaria\, gimnasios\,
+  cursos.\n\nEntrá al que se parezca a lo tuyo y usalo como si fuera tuyo:
+  reservá\, pedí\, filtrá\, rompelo. Para eso están.\n\nDespués me con
+ tás qué le falta para ser el tuyo.\n\nLink en la bio.\n\nHASHTAGS:\n#mon
+ tevideo #pymesuy #desarrolloweb #uruguay\n\nANTES DE PUBLICAR\nEl video no
+  tiene audio a propósito: elegí un audio en tendencia dentro de Instagra
+ m al subirlo. Es de las pocas palancas de alcance que le queda a un Reel.\
+ n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBuscá en Instagram negocios de este
+  rubro en Montevideo cuyo perfil muestre el problema a la vista (la carta 
+ es una foto de un papel\, "reservas por DM" en la bio\, precios contestado
+ s uno por uno en comentarios). Escribiles corto\, sin precio y con algo pa
+ ra tocar.\n\nEse es el motor real. El posteo solo abre la puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:1/6 · Reel general · FIJAR ARRIBA DEL PERFIL
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-2@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260730T203000
+DTEND;TZID=America/Montevideo:20260730T205500
+SUMMARY:2/6 · Carrusel · Turnos y reservas
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Carrusel de 5 imágenes\, 1080x1350\n\nARCHIVOS\, EN E
+ STE ORDEN:\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida
+ /a1.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/a2
+ .png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/a3.pn
+ g\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/a4.png\n
+ /Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/a5.png\n\nC
+ APTION:\nEl teléfono suena mientras estás atendiendo. No podés atender.
+  Llamó a otro lado.\n\nUn sistema de turnos no es un lujo de cadena grand
+ e. Es dejar de perder clientes por estar ocupado trabajando.\n\nEsta agend
+ a está funcionando y la podés probar entera desde el link de la bio. Res
+ ervá un turno de mentira y mirá lo que le llega al cliente.\n\nConsultor
+ ios\, peluquerías\, gimnasios\, estudios: si tomás turnos por WhatsApp\,
+  esto es para vos.\n\nHASHTAGS:\n#montevideo #turnosonline #peluqueriauy #
+ consultoriouy #pymesuy\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBuscá en Ins
+ tagram negocios de este rubro en Montevideo cuyo perfil muestre el problem
+ a a la vista (la carta es una foto de un papel\, "reservas por DM" en la b
+ io\, precios contestados uno por uno en comentarios). Escribiles corto\, s
+ in precio y con algo para tocar.\n\nEse es el motor real. El posteo solo a
+ bre la puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:2/6 · Carrusel · Turnos y reservas
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-3@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260801T130000
+DTEND;TZID=America/Montevideo:20260801T132500
+SUMMARY:3/6 · Reel · Gastronomía
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Reel vertical\, 15 segundos\n\nARCHIVO:\n/Users/coru/D
+ esktop/Proyectos/surlabs-social/videos/surlabs-reel-gastronomia/renders/vi
+ deo.mp4\n\nTEXTO EN PANTALLA (primeros 3 segundos):\ntu carta sigue siendo
+  una FOTO\n\nCAPTION:\nTu carta sigue siendo una foto que mandás por What
+ sApp.\n\nEl cliente la abre. No se lee. Pregunta el precio. Esperás. Cont
+ esta otro. Se enfría.\n\nEsto es una carta digital de verdad: se ve bien 
+ en cualquier teléfono\, la actualizás vos en 10 segundos y no depende de
+  que alguien esté libre para contestar.\n\nNo es una maqueta. Está onlin
+ e ahora mismo y la podés usar: link en la bio.\n\n¿Qué rubro querés ve
+ r funcionando? Escribilo acá abajo y lo subo.\n\nHASHTAGS:\n#gastronomiau
+ y #montevideo #cartadigital #restaurantesuruguay #pymesuy\n\nANTES DE PUBL
+ ICAR\nEl video no tiene audio a propósito: elegí un audio en tendencia d
+ entro de Instagram al subirlo. Es de las pocas palancas de alcance que le 
+ queda a un Reel.\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBuscá en Instagram
+  negocios de este rubro en Montevideo cuyo perfil muestre el problema a la
+  vista (la carta es una foto de un papel\, "reservas por DM" en la bio\, p
+ recios contestados uno por uno en comentarios). Escribiles corto\, sin pre
+ cio y con algo para tocar.\n\nEse es el motor real. El posteo solo abre la
+  puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:3/6 · Reel · Gastronomía
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-4@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260804T203000
+DTEND;TZID=America/Montevideo:20260804T205500
+SUMMARY:4/6 · Carrusel · Tu negocio vive en una planilla
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Carrusel de 7 imágenes\, 1080x1350\n\nEs el más comp
+ artible de los seis. No vende: nombra el problema. Es el que un dueño le 
+ manda a otro dueño.\n\nARCHIVOS\, EN ESTE ORDEN:\n/Users/coru/Desktop/Pro
+ yectos/surlabs-social/carruseles/salida/b1.png\n/Users/coru/Desktop/Proyec
+ tos/surlabs-social/carruseles/salida/b2.png\n/Users/coru/Desktop/Proyectos
+ /surlabs-social/carruseles/salida/b3.png\n/Users/coru/Desktop/Proyectos/su
+ rlabs-social/carruseles/salida/b4.png\n/Users/coru/Desktop/Proyectos/surla
+ bs-social/carruseles/salida/b5.png\n/Users/coru/Desktop/Proyectos/surlabs-
+ social/carruseles/salida/b6.png\n/Users/coru/Desktop/Proyectos/surlabs-soc
+ ial/carruseles/salida/b7.png\n\nCAPTION:\nTodo negocio chico empieza así:
+  una planilla\, un cuaderno y el WhatsApp del dueño.\n\nNo está mal. Es 
+ lo que hay que hacer al principio.\n\nEl problema aparece después: cuando
+  el negocio crece y todo sigue pasando por vos. Ahí el cuello de botella 
+ no es el local ni el equipo. Sos vos contestando.\n\nSi te pasa\, contame 
+ por DM en qué se te va el tiempo. Te digo si se puede resolver y cómo. S
+ i no se puede\, también te lo digo.\n\nHASHTAGS:\n#pymesuy #emprendedores
+ uy #montevideo #gestion #uruguay\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBus
+ cá en Instagram negocios de este rubro en Montevideo cuyo perfil muestre 
+ el problema a la vista (la carta es una foto de un papel\, "reservas por D
+ M" en la bio\, precios contestados uno por uno en comentarios). Escribiles
+  corto\, sin precio y con algo para tocar.\n\nEse es el motor real. El pos
+ teo solo abre la puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:4/6 · Carrusel · Tu negocio vive en una planilla
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-5@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260806T203000
+DTEND;TZID=America/Montevideo:20260806T205500
+SUMMARY:5/6 · Reel general · Cómo trabajamos
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Reel vertical\, 18 segundos\n\nARCHIVO:\n/Users/coru/D
+ esktop/Proyectos/surlabs-social/videos/surlabs-reel-confianza/renders/vide
+ o.mp4\n\nLe sirve a todos los rubros. Ataca la objeción más grande de un
+ a pyme: ya le vendieron humo antes.\n\nTEXTO EN PANTALLA (primeros 3 segun
+ dos):\n«lo vemos y te aviso» · acá NO va a pasar\n\nCAPTION:\n«Lo vem
+ os y te aviso.»\n\nSi alguna vez te dijeron eso y nunca más supiste nada
+ \, ya sabés por qué desconfiás.\n\nAsí trabajamos nosotros:\n\nMiramos
+  cómo trabajás hoy y dónde se te va el tiempo.\nTe decimos qué se hace
+ \, cuánto sale y cuándo está. Por escrito.\nLanzamos una primera versi
+ ón que ya te sirva y la ajustamos con vos usándola.\nY seguimos cuando e
+ l negocio pide cambios.\n\nAlcance\, precio y plazo antes de que gastes un
+  peso. Si no se puede\, te lo decimos también.\n\nContanos qué parte de 
+ tu negocio te está costando.\n\nHASHTAGS:\n#pymesuy #montevideo #emprende
+ doresuy #desarrolloweb\n\nANTES DE PUBLICAR\nEl video no tiene audio a pro
+ pósito: elegí un audio en tendencia dentro de Instagram al subirlo. Es d
+ e las pocas palancas de alcance que le queda a un Reel.\n\nDESPUÉS DE PUB
+ LICAR\, 20 MINUTOS\nBuscá en Instagram negocios de este rubro en Montevid
+ eo cuyo perfil muestre el problema a la vista (la carta es una foto de un 
+ papel\, "reservas por DM" en la bio\, precios contestados uno por uno en c
+ omentarios). Escribiles corto\, sin precio y con algo para tocar.\n\nEse e
+ s el motor real. El posteo solo abre la puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:5/6 · Reel general · Cómo trabajamos
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-6@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260808T130000
+DTEND;TZID=America/Montevideo:20260808T132500
+SUMMARY:6/6 · Carrusel · Comercio y catálogo
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Carrusel de 6 imágenes\, 1080x1350\n\nCon este quedan
+  6 publicaciones: dos filas completas de la grilla del perfil.\n\nARCHIVOS
+ \, EN ESTE ORDEN:\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles
+ /salida/c1.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/sa
+ lida/c2.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salid
+ a/c3.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/c
+ 4.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/c5.p
+ ng\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/c6.png\
+ n\nCAPTION:\n"¿Tenés lista de precios?"\n"¿Y en talle M?"\n"¿Hacés en
+ víos?"\n\nCuarenta veces por día\, la misma respuesta escrita a mano\, m
+ ientras atendés el local.\n\nUn catálogo online contesta todo eso solo\,
+  muestra lo que tenés y toma el pedido mientras vos cerrás la persiana.\
+ n\nEstá funcionando en el link de la bio. Entrá y armá un pedido para v
+ er cómo se siente del lado del cliente.\n\nTiendas\, boutiques\, distribu
+ idoras\, viveros: si hoy pasás la lista por WhatsApp\, esto es para vos.\
+ n\nHASHTAGS:\n#comerciouy #montevideo #tiendaonline #catalogodigital #pyme
+ suy\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBuscá en Instagram negocios de 
+ este rubro en Montevideo cuyo perfil muestre el problema a la vista (la ca
+ rta es una foto de un papel\, "reservas por DM" en la bio\, precios contes
+ tados uno por uno en comentarios). Escribiles corto\, sin precio y con alg
+ o para tocar.\n\nEse es el motor real. El posteo solo abre la puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:6/6 · Carrusel · Comercio y catálogo
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-revision@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260810T190000
+DTEND;TZID=America/Montevideo:20260810T193000
+SUMMARY:Revisión de las dos semanas de Instagram
+LOCATION:Instagram
+DESCRIPTION:A esta escala los seguidores no dicen nada. Mirá estas tres:\n
+ \n1. VISITAS AL PERFIL. Es la métrica real: mide si el que ve un posteo q
+ uiere saber quién sos.\n2. CLICS EN EL ENLACE. Mide si las demos tiran.\n
+ 3. DMs RECIBIDOS. Es la única que se convierte en plata.\n\nCÓMO LEERLO:
+ \nSi hay visitas al perfil pero cero DMs\, el problema es la bio o el llam
+ ado a la acción\, no el contenido.\nSi no hay ni visitas\, el problema es
+  el gancho de los primeros 3 segundos.\n\nY lo más importante: mirá tu p
+ lanilla de DMs\, no el panel de Instagram. Si un rubro pregunta más que e
+ l resto\, ese es el próximo Reel: se clona la plantilla de gastronomía c
+ ambiando gancho\, captura y las tres líneas del problema.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Revisión de las dos semanas de Instagram
+END:VALARM
+END:VEVENT
+END:VCALENDAR

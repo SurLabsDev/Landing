@@ -65,11 +65,32 @@ Tres posteos por semana. Martes, jueves y sábado.
 | # | Día | Formato | Tema | Estado |
 |---|---|---|---|---|
 | 1 | Semana 1, martes | **Reel general, 20s** | Las 12 demos abiertas | ✅ Renderizado · **FIJAR ARRIBA** |
-| 2 | Semana 1, jueves | Carrusel | Turnos y reservas | A diseñar |
+| 2 | Semana 1, jueves | Carrusel | Turnos y reservas | ✅ Diseñado |
 | 3 | Semana 1, sábado | Reel, 15s | Gastronomía: la carta | ✅ Renderizado |
-| 4 | Semana 2, martes | Carrusel | "Tu negocio vive en una planilla" | A diseñar |
+| 4 | Semana 2, martes | Carrusel | "Tu negocio vive en una planilla" | ✅ Diseñado |
 | 5 | Semana 2, jueves | **Reel general, 18s** | Cómo trabajamos, contra el miedo al humo | ✅ Renderizado |
-| 6 | Semana 2, sábado | Reel, 15s | **El rubro que te esté mordiendo** | Clonar la plantilla de gastronomía |
+| 6 | Semana 2, sábado | Carrusel | Comercio y catálogo | ✅ Diseñado |
+
+**Por qué son seis y no cinco.** La grilla del perfil de Instagram es de tres
+columnas: con seis publicaciones quedan **dos filas completas**, con cinco queda
+una fila cortada. Y comercio era el único rubro grande que ninguna otra pieza
+tocaba: los Reels cubren rango general, gastronomía y proceso, y los otros dos
+carruseles cubren turnos y planilla.
+
+**El Reel del rubro que te esté mordiendo** pasa a la semana 3. A esa altura vas
+a tener tres semanas de DMs y vas a saber cuál pregunta más, así que lo elegís
+con datos en vez de adivinar ahora. Se clona la plantilla del Reel de
+gastronomía: mismos cinco cuadros, mismo cierre, se cambian el gancho, la
+captura y las tres líneas del problema.
+
+Ganchos ya escritos por si sale alguno de estos:
+
+| Rubro | Gancho de los primeros 3 segundos |
+|---|---|
+| Inmobiliaria | cuarenta llamadas para mostrar **tres** propiedades |
+| Salud y belleza | el teléfono suena **mientras** estás atendiendo |
+| Gimnasios | cuántos socios se te fueron **sin avisar** |
+| Educación | tus cursos viven en un **Drive** que nadie encuentra |
 
 ### Por qué el plan cambió a mitad de camino
 
@@ -85,10 +106,6 @@ La especificidad sigue siendo lo que más convierte, pero se consigue mejor
 **mandando el link de la demo exacta por DM**: es más dirigido que un Reel
 público y ya está hecho.
 
-Por eso el posteo 6 no tiene rubro asignado. A las dos semanas vas a saber por
-los DMs qué rubro está preguntando, y ese es el que se clona sobre la plantilla
-de gastronomía. Elegir con datos en vez de adivinar ahora.
-
 ### Los dos videos generales hacen trabajos distintos
 
 No son el mismo video dos veces. Un dueño de pyme se hace dos preguntas en
@@ -98,9 +115,8 @@ orden, y hay uno para cada una:
 2. **«¿puedo confiar en esta gente?»** → el Reel de cómo trabajamos. Es la
    objeción más grande, porque a la mayoría ya le vendieron humo una vez.
 
-El 6 se fija arriba del perfil apenas se publica.
-
-**Por qué este es un Reel y no un carrusel, y por qué dura 20 segundos y no 15.**
+**El posteo 1 se fija arriba del perfil apenas se publica. Por qué es un Reel y
+no un carrusel, y por qué dura 20 segundos y no 15.**
 Hace un trabajo distinto de los otros tres. Los de rubro son para tráfico frío:
 frenan el scroll de alguien que no te conoce, y ahí cada segundo cuesta
 retención. Este no frena a nadie de paso; lo mira quien **ya entró al perfil** y
@@ -223,23 +239,38 @@ Si te pasa, contame por DM en qué se te va el tiempo. Te digo si se puede resol
 
 ---
 
-## Posteo 6 · Reel · El rubro que te esté mordiendo
+## Posteo 6 · Carrusel · Comercio y catálogo
 
-**Sin definir a propósito.** A esta altura vas a tener dos semanas de DMs y vas a
-saber qué rubro pregunta más. Ese es el que se produce, clonando la plantilla del
-Reel de gastronomía: mismos cinco cuadros, mismo cierre, se cambian el gancho, la
-captura y las tres líneas del problema.
+Cubre el único rubro grande que ninguna otra pieza toca. Y con este quedan seis
+publicaciones: dos filas completas de la grilla del perfil.
 
-Ganchos ya escritos por si el rubro sale alguno de estos:
-
-| Rubro | Gancho de los primeros 3 segundos |
+| # | Contenido |
 |---|---|
-| Comercio | «pasame la lista de precios» · **40 veces** por día |
-| Inmobiliaria | cuarenta llamadas para mostrar **tres** propiedades |
-| Salud y belleza | el teléfono suena **mientras** estás atendiendo |
-| Gimnasios | cuántos socios se te fueron **sin avisar** |
+| 1 | **"¿tenés lista de precios?" cuarenta veces por día** |
+| 2 | Captura del catálogo + "todo lo que vendés, con precio y foto" |
+| 3 | Captura del pedido + "el cliente arma el pedido solo" |
+| 4 | "y sigue vendiendo con la persiana baja." |
+| 5 | "tiendas. boutiques. distribuidoras. viveros." |
+| 6 | Naranja: **"armá un pedido de mentira"** |
 
----
+**Caption:**
+
+```
+"¿Tenés lista de precios?"
+"¿Y en talle M?"
+"¿Hacés envíos?"
+
+Cuarenta veces por día, la misma respuesta escrita a mano, mientras atendés el local.
+
+Un catálogo online contesta todo eso solo, muestra lo que tenés y toma el pedido mientras vos cerrás la persiana.
+
+Está funcionando en el link de la bio. Entrá y armá un pedido para ver cómo se siente del lado del cliente.
+
+Tiendas, boutiques, distribuidoras, viveros: si hoy pasás la lista por WhatsApp, esto es para vos.
+```
+
+**Hashtags:** `#comerciouy #montevideo #tiendaonline #catalogodigital #pymesuy`
+
 
 ## Posteo 1 · Reel general · Las 12 demos · FIJAR ARRIBA
 
