@@ -121,16 +121,35 @@ No CMS, no data layer, no API routes.
 
 Cards link to `https://demos.surlabs.tech/ejemplo1` … `/ejemplo12`, which live in the sibling project `../surlabs-demos`. Adding an entry to `demos.ts` does nothing unless that route exists and is deployed there.
 
-**Screenshots are generated, not hand-made.** `public/demos/ejemploN.webp` are real captures at 1440x900. To regenerate after a demo changes:
+**Screenshots are generated, not hand-made.** `public/demos/ejemploN.webp` are real captures at 1440x900, ~565 KB for all 12. Keep it that way: do not commit multi-megabyte PNGs.
 
-```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu \
-  --hide-scrollbars --force-device-scale-factor=2 --window-size=1440,900 \
-  --screenshot=shot.png --virtual-time-budget=9000 https://demos.surlabs.tech/ejemploN
-sips -Z 1440 shot.png --out tmp.png && cwebp -q 80 -m 6 tmp.png -o public/demos/ejemploN.webp
+**A plain headless screenshot silently produces broken captures.** The demos reveal content on scroll (IntersectionObserver entrance animations), and a headless capture never scrolls — so anything below the initial fold never animates in and lands as a blank area. This is not hypothetical: it shipped. `ejemplo7` sat in production with an empty chat panel and `ejemplo12` with no hero headline, and the missing content read as "that's how the demo looks."
+
+The regeneration procedure must **scroll the whole page first**, then return to the top and wait for animations to settle. Drive it with `playwright-core` (in a scratch dir, not this repo):
+
+```js
+await page.goto(url, { waitUntil: 'networkidle' });
+await page.evaluate(async () => {                       // dispara los observers
+  const paso = window.innerHeight * 0.7;
+  for (let y = 0; y < document.body.scrollHeight; y += paso) {
+    window.scrollTo(0, y); await new Promise(r => setTimeout(r, 220));
+  }
+  window.scrollTo(0, document.body.scrollHeight);
+  await new Promise(r => setTimeout(r, 600));
+  window.scrollTo(0, 0);
+  await new Promise(r => setTimeout(r, 900));
+});
+await page.waitForFunction(() =>                         // espera a que frenen
+  document.getAnimations().filter(a => a.playState === 'running').length === 0,
+  { timeout: 8000 }).catch(() => {});
+await page.screenshot({ path: `raw${i}.png` });          // 1440x900 @2x
 ```
 
-All 12 total ~530 KB. Keep it that way: do not commit multi-megabyte PNGs.
+Then `sips -Z 1440 raw.png --out tmp.png && cwebp -q 80 -m 6 tmp.png -o public/demos/ejemploN.webp`.
+
+**Verify by weight before committing.** A capture that comes out dramatically lighter than the one it replaces is almost always missing content, not better compressed: `ejemplo9` dropped 74% when its hero failed to render. Compare old and new byte sizes and open anything that moved more than ~15%.
+
+**`ejemplo6` is a rotating carousel**, so which slide you catch is luck. The drinks slide sells better on a gastronomy card than the merchandise one; re-run until you get it, or keep the existing file.
 
 ### Contact is a WhatsApp deep link
 
