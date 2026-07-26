@@ -93,7 +93,7 @@ export function Contact() {
                         </a>
 
                         <p className="type-body mt-5 text-[0.9375rem] leading-relaxed text-bone-dim">
-                            Es la vía más rápida. Contestamos de lunes a viernes, en el día.
+                            Es la vía más rápida. Contestamos en el transcurso del día.
                         </p>
 
                         <dl className="mt-10 divide-y divide-bone/12 border-t border-bone/12">
