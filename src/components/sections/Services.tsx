@@ -6,6 +6,7 @@ import {
     ChartLineUp,
     Megaphone,
 } from "@phosphor-icons/react/dist/ssr";
+import { EV } from "@/lib/track";
 
 /**
  * Bento asimétrico de 4 celdas para 4 servicios. Ni una celda vacía, ni cuatro
@@ -108,7 +109,7 @@ export function Services() {
 
             <p className="animate-on-scroll type-body mt-10 text-base text-bone-dim">
                 ¿Lo tuyo no está en la lista?{" "}
-                <Link href="#contacto" className="link-underline font-semibold text-bone">
+                <Link href="#contacto" data-ev={EV.ctaServices} className="link-underline font-semibold text-bone">
                     Hablemos
                 </Link>
                 .

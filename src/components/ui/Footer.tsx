@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import { Logo } from "@/components/brand/Logo";
 import { WHATSAPP_NUMBER, CONTACT_EMAIL } from "@/lib/demos";
+import { EV } from "@/lib/track";
 
 /**
  * Los enlaces a redes que había antes apuntaban todos a "#". Se quitaron:
@@ -54,6 +55,7 @@ export function Footer() {
                                         href={`https://wa.me/${WHATSAPP_NUMBER}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        data-ev={EV.waFooter}
                                         className="inline-flex items-center gap-2 text-[0.9375rem] text-bone-dim transition-colors hover:text-bone"
                                     >
                                         <WhatsappLogo size={18} weight="fill" aria-hidden="true" />
@@ -63,6 +65,7 @@ export function Footer() {
                                 <li>
                                     <a
                                         href={`mailto:${CONTACT_EMAIL}`}
+                                        data-ev={EV.mailFooter}
                                         className="link-underline text-[0.9375rem] text-bone-dim transition-colors hover:text-bone"
                                     >
                                         {CONTACT_EMAIL}

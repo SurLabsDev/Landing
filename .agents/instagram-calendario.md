@@ -1,4 +1,4 @@
-# Instagram Surlabs · Primeras dos semanas
+# Instagram Surlabs · Primeras tres semanas
 
 **Cuenta:** [@surlabs.tech](https://www.instagram.com/surlabs.tech)
 **Creado:** 2026-07-24
@@ -9,7 +9,7 @@
 
 No es un altavoz. Una cuenta nueva sin seguidores no tiene alcance orgánico y no vale la pena mentirse con eso.
 
-**Esta cuenta es munición de venta.** Su trabajo es que, cuando le escribís a un negocio y el dueño abre tu perfil para ver quién carajo sos, encuentre seis pruebas de que construís cosas que funcionan, y al menos una de su propio rubro.
+**Esta cuenta es munición de venta.** Su trabajo es que, cuando le escribís a un negocio y el dueño abre tu perfil para ver quién carajo sos, encuentre nueve pruebas de que construís cosas que funcionan, y al menos una de su propio rubro.
 
 De ahí salen tres reglas que ordenan todo lo demás:
 
@@ -70,16 +70,18 @@ Tres posteos por semana. Martes, jueves y sábado.
 | 4 | Semana 2, martes | Carrusel | "Tu negocio vive en una planilla" | ✅ Diseñado |
 | 5 | Semana 2, jueves | **Reel general, 18s** | Cómo trabajamos, contra el miedo al humo | ✅ Renderizado |
 | 6 | Semana 2, sábado | Carrusel | Comercio y catálogo | ✅ Diseñado |
+| 7 | Semana 3, martes | Reel, 15s | **Te dejaron la web a medias** | ✅ Renderizado |
+| 8 | Semana 3, jueves | Carrusel | **Retomar lo que dejó otro** | ✅ Diseñado |
+| 9 | Semana 3, sábado | Reel, 12s | **El diagnóstico sin costo** | ✅ Renderizado |
 
-**Por qué son seis y no cinco.** La grilla del perfil de Instagram es de tres
-columnas: con seis publicaciones quedan **dos filas completas**, con cinco queda
-una fila cortada. Y comercio era el único rubro grande que ninguna otra pieza
-tocaba: los Reels cubren rango general, gastronomía y proceso, y los otros dos
-carruseles cubren turnos y planilla.
+**Por qué son nueve.** La grilla del perfil es de tres columnas, así que nueve
+publicaciones son **tres filas completas**. Los seis primeros cubren los rubros
+grandes y el proceso; los tres últimos abren el ángulo del rescate, que está
+explicado más abajo.
 
-**El Reel del rubro que te esté mordiendo** pasa a la semana 3. A esa altura vas
-a tener tres semanas de DMs y vas a saber cuál pregunta más, así que lo elegís
-con datos en vez de adivinar ahora. Se clona la plantilla del Reel de
+**El Reel del rubro que te esté mordiendo** queda para la semana 4. A esa altura
+vas a tener tres semanas de DMs y vas a saber cuál pregunta más, así que lo
+elegís con datos en vez de adivinar ahora. Se clona la plantilla del Reel de
 gastronomía: mismos cinco cuadros, mismo cierre, se cambian el gancho, la
 captura y las tres líneas del problema.
 
@@ -124,6 +126,60 @@ quien lo recibe por DM cuando su negocio no encaja en ninguno de los tres rubros
 Es video de conversión, no de alcance, y como se mira a propósito puede durar
 más. Apretado a 15 segundos el montaje de doce productos pasa tan rápido que no
 se lee ninguno.
+
+---
+
+## El ángulo del rescate · Posteos 7, 8 y 9
+
+Los seis primeros le hablan a quien todavía no compró software. Estos tres le
+hablan a **quien ya compró y salió mal**, y es un público bastante mejor.
+
+**Por qué funciona:**
+
+1. **Está precalificado.** Ya pagó por software, así que tiene presupuesto
+   probado, ya atravesó la decisión de comprar, y tiene un dolor urgente y
+   concreto en vez de una molestia difusa.
+2. **Neutraliza tu peor debilidad.** No tenés clientes que nombrar, y para un
+   proyecto nuevo eso es una objeción real. Para un rescate el marco se da
+   vuelta: al tipo lo quemó alguien **que sí tenía portfolio**. Su miedo no es
+   "¿serán buenos?", es "¿alguien va a querer tocar esto?". Que digas que sí ya
+   es la diferencia.
+3. **Casi nadie lo ofrece.** Heredar código ajeno es ingrato y arriesgado, y la
+   mayoría lo rechaza. Decir que sí en voz alta es una cuña de posicionamiento.
+4. **Es el único ángulo con búsqueda activa.** Nadie googlea "software a
+   medida", pero sí "arreglar mi página web" cuando lo dejaron colgado.
+
+### La regla que no se rompe
+
+**Nunca ensuciar al proveedor anterior.** Por dos motivos, y los dos son de
+plata, no de modales:
+
+- **El cliente lo eligió.** Burlarse del que hizo el trabajo es llamarlo tonto a
+  él en la cara. Mata la venta.
+- Habla de cómo vas a hablar del próximo. Si despedazás al anterior delante de
+  un desconocido, ese desconocido asume que un día vas a hacer lo mismo con él.
+
+La culpa va sobre **la situación**, jamás sobre su decisión. De ahí sale la línea
+"pasa todo el tiempo, y casi nunca es culpa tuya: elegiste con la información que
+tenías". Empatía, no superioridad.
+
+### Los tres hacen trabajos distintos
+
+| # | Pieza | Trabajo |
+|---|---|---|
+| 7 | Reel «a medias» | **El gancho.** Frena a quien está viviendo eso ahora mismo |
+| 8 | Carrusel «¿se puede retomar?» | **Las objeciones.** ¿Se puede? ¿Y si está muy mal? ¿Cualquier tecnología? |
+| 9 | Reel «diagnóstico» | **La conversión.** Pide un link y nada más |
+
+El remate del 9 es lo que más confianza genera y conviene no suavizarlo:
+**"y si no se puede arreglar, también te lo decimos"**. Renunciar a un proyecto
+en voz alta es la prueba más barata de que no vendés humo.
+
+### Si esto funciona, la landing tiene que decirlo
+
+Hoy el sitio **no tiene una sola línea** sobre retomar proyectos de otros. Si a
+las tres semanas el rescate trae más DMs que los posteos por rubro, ahí está tu
+posicionamiento real y hay que llevarlo al sitio, no dejarlo solo en Instagram.
 
 ---
 
@@ -298,6 +354,91 @@ Link en la bio.
 
 ---
 
+## Posteo 7 · Reel · Te dejaron la web a medias
+
+Arranca el ángulo del rescate. 15 segundos.
+`surlabs-social/videos/surlabs-reel-rescate/renders/video.mp4`
+
+**Texto en pantalla (primeros 3 segundos):**
+> pagaste una web y quedó **a medias**
+
+**Caption:**
+
+```
+Pagaste una web y quedó a medias.
+
+Nunca la terminaron. No te dieron los accesos. Y ahora no te contestan.
+
+Pasa todo el tiempo, y casi nunca es culpa tuya: elegiste con la información que tenías.
+
+La buena noticia es que casi siempre se puede retomar. No hace falta tirar todo y empezar de cero: lo que está bien hecho se aprovecha y lo que no, se reemplaza.
+
+Nosotros agarramos proyectos que dejó otro. Contanos qué pasó y te decimos si tiene arreglo.
+```
+
+**Hashtags:** `#pymesuy #montevideo #desarrolloweb #emprendedoresuy`
+
+---
+
+## Posteo 8 · Carrusel · Retomar lo que dejó otro
+
+Contesta las tres objeciones que frenan a alguien que ya se quemó una vez.
+
+| # | Contenido |
+|---|---|
+| 1 | **"¿se puede arreglar lo que me dejó el anterior?"** |
+| 2 | "no hace falta tirar todo y empezar de cero." |
+| 3 | "¿y si está muy mal hecho?" |
+| 4 | "¿pueden con cualquier tecnología?" |
+| 5 | Captura de gestión + "esto no lo construimos de cero" |
+| 6 | Naranja: **"mandanos el link"** |
+
+**Caption:**
+
+```
+"¿Se puede arreglar lo que me dejó el anterior?"
+
+Es la pregunta que más nos hacen, y la respuesta casi siempre es sí.
+
+No hace falta tirar todo y empezar de cero. Lo que está bien hecho se aprovecha, lo que no se reemplaza, y casi nunca hay que rehacer el 100%.
+
+¿Y si está muy mal hecho? Te lo decimos de frente. A veces rehacer sale más barato que parchar, y preferimos que lo sepas antes y no a mitad de camino.
+
+¿Pueden con cualquier tecnología? Con casi todas. Y si no podemos, te lo decimos en la primera charla en vez de aceptar y averiguar después.
+
+Mandanos el link y le damos una mirada.
+```
+
+**Hashtags:** `#pymesuy #montevideo #desarrolloweb #uruguay`
+
+---
+
+## Posteo 9 · Reel · El diagnóstico sin costo
+
+La pieza de conversión del ángulo. 12 segundos.
+`surlabs-social/videos/surlabs-reel-diagnostico/renders/video.mp4`
+
+Pide muy poco (un link) y el remate honesto es lo que genera la confianza.
+
+**Texto en pantalla (primeros 3 segundos):**
+> antes de tirarlo y arrancar de **cero**
+
+**Caption:**
+
+```
+Antes de tirarlo y arrancar de cero, que alguien lo mire.
+
+Mandanos el link. Le damos una mirada y te decimos qué tiene: qué se puede aprovechar, qué hay que reemplazar y cuánto trabajo es.
+
+Sin costo y sin compromiso.
+
+Y si no se puede arreglar, también te lo decimos. Preferimos perder un proyecto antes que cobrarte por parchar algo que no va a aguantar.
+```
+
+**Hashtags:** `#pymesuy #montevideo #desarrolloweb #emprendedoresuy`
+
+---
+
 ## Lo que hace que esto funcione: el DM
 
 Los seis posteos son la vidriera. La venta pasa acá, y esto sí cuesta tiempo, aunque poco.
@@ -347,7 +488,7 @@ Es contenido, portfolio y prospección en un solo movimiento. Y te resuelve el p
 
 ---
 
-## Qué mirar a las dos semanas
+## Qué mirar en las revisiones
 
 Con esta escala, los seguidores no dicen nada. Estas tres sí:
 
@@ -355,7 +496,11 @@ Con esta escala, los seguidores no dicen nada. Estas tres sí:
 2. **Clics en el enlace.** Mide si las demos tiran.
 3. **DMs recibidos.** Es la única que se convierte en plata.
 
-Si a las dos semanas hay cero DMs pero sí visitas al perfil, el problema es la bio o el llamado a la acción, no el contenido. Si no hay ni visitas, el problema es el gancho de los primeros 3 segundos.
+Si hay cero DMs pero sí visitas al perfil, el problema es la bio o el llamado a la acción, no el contenido. Si no hay ni visitas, el problema es el gancho de los primeros 3 segundos.
+
+**En el cierre de la tercera semana hay una pregunta más, y es la importante:**
+¿cuántos DMs vinieron del ángulo del rescate (7, 8 y 9) contra los de rubro? Si
+el rescate trae más, ese es tu posicionamiento real y conviene volcarse ahí.
 
 ---
 
@@ -363,6 +508,6 @@ Si a las dos semanas hay cero DMs pero sí visitas al perfil, el problema es la 
 
 Queda escrito para no repetir la discusión más adelante.
 
-- **No hay video institucional de presentación.** Nadie sigue a una empresa que no conoce para verla presentarse. Los seis posteos muestran rubros, no muestran a Surlabs.
+- **No hay video institucional de presentación.** Nadie sigue a una empresa que no conoce para verla presentarse. Los posteos muestran rubros y problemas, no muestran a Surlabs.
 - **Nadie aparece en cámara y no se graba nada.** Todo sale de capturas reales y motion graphics, que además sostiene la regla del brief de leerse como empresa consolidada.
 - **No se inventa prueba social.** Cero testimonios, cero métricas, cero "+50 clientes". La prueba es que las demos se pueden tocar.

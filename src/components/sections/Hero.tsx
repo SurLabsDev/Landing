@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { EV } from "@/lib/track";
 
 /**
  * Hero tipográfico, sin imagen.
@@ -38,6 +39,7 @@ export function Hero() {
                     <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                         <Link
                             href="#contacto"
+                            data-ev={EV.ctaHero}
                             className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-brand bg-ember px-8 py-4 text-base font-bold text-ink transition-colors hover:bg-ember-hot active:translate-y-px"
                         >
                             Hablemos
@@ -49,6 +51,7 @@ export function Hero() {
                         </Link>
                         <Link
                             href="#proyectos"
+                            data-ev={EV.ctaWork}
                             className="inline-flex items-center justify-center whitespace-nowrap rounded-brand border border-bone/25 px-8 py-4 text-base font-semibold text-bone transition-colors hover:border-bone/60 hover:bg-bone/5 active:translate-y-px"
                         >
                             Ver el trabajo

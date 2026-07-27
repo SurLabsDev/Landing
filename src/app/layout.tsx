@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
+import { Metrics } from "@/components/ui/Metrics";
 import "./globals.css";
 
 /**
@@ -53,6 +54,15 @@ export default function RootLayout({
           Saltar al contenido
         </a>
         {children}
+        {/*
+          VERCEL_ENV lo define Vercel solo y vale "production", "preview" o
+          "development". Se lee acá, del lado del servidor, y se baja resuelto:
+          así el componente de cliente no depende de que la variable esté
+          expuesta al navegador.
+        */}
+        <Metrics
+          mode={process.env.VERCEL_ENV === "production" ? "production" : "development"}
+        />
       </body>
     </html>
   );

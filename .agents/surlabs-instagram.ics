@@ -41,7 +41,7 @@ UID:surlabs-post-1@surlabs.tech
 DTSTAMP:20260725T120000Z
 DTSTART;TZID=America/Montevideo:20260728T203000
 DTEND;TZID=America/Montevideo:20260728T205500
-SUMMARY:1/6 · Reel general · FIJAR ARRIBA DEL PERFIL
+SUMMARY:1/9 · Reel general · FIJAR ARRIBA DEL PERFIL
 LOCATION:Instagram
 DESCRIPTION:FORMATO: Reel vertical\, 20 segundos\n\nARCHIVO:\n/Users/coru/D
  esktop/Proyectos/surlabs-social/videos/surlabs-reel-general/renders/video.
@@ -64,7 +64,7 @@ DESCRIPTION:FORMATO: Reel vertical\, 20 segundos\n\nARCHIVO:\n/Users/coru/D
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:1/6 · Reel general · FIJAR ARRIBA DEL PERFIL
+DESCRIPTION:1/9 · Reel general · FIJAR ARRIBA DEL PERFIL
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -72,7 +72,7 @@ UID:surlabs-post-2@surlabs.tech
 DTSTAMP:20260725T120000Z
 DTSTART;TZID=America/Montevideo:20260730T203000
 DTEND;TZID=America/Montevideo:20260730T205500
-SUMMARY:2/6 · Carrusel · Turnos y reservas
+SUMMARY:2/9 · Carrusel · Turnos y reservas
 LOCATION:Instagram
 DESCRIPTION:FORMATO: Carrusel de 5 imágenes\, 1080x1350\n\nARCHIVOS\, EN E
  STE ORDEN:\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida
@@ -96,7 +96,7 @@ DESCRIPTION:FORMATO: Carrusel de 5 imágenes\, 1080x1350\n\nARCHIVOS\, EN E
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:2/6 · Carrusel · Turnos y reservas
+DESCRIPTION:2/9 · Carrusel · Turnos y reservas
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -104,7 +104,7 @@ UID:surlabs-post-3@surlabs.tech
 DTSTAMP:20260725T120000Z
 DTSTART;TZID=America/Montevideo:20260801T130000
 DTEND;TZID=America/Montevideo:20260801T132500
-SUMMARY:3/6 · Reel · Gastronomía
+SUMMARY:3/9 · Reel · Gastronomía
 LOCATION:Instagram
 DESCRIPTION:FORMATO: Reel vertical\, 15 segundos\n\nARCHIVO:\n/Users/coru/D
  esktop/Proyectos/surlabs-social/videos/surlabs-reel-gastronomia/renders/vi
@@ -128,7 +128,7 @@ DESCRIPTION:FORMATO: Reel vertical\, 15 segundos\n\nARCHIVO:\n/Users/coru/D
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:3/6 · Reel · Gastronomía
+DESCRIPTION:3/9 · Reel · Gastronomía
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -136,34 +136,34 @@ UID:surlabs-post-4@surlabs.tech
 DTSTAMP:20260725T120000Z
 DTSTART;TZID=America/Montevideo:20260804T203000
 DTEND;TZID=America/Montevideo:20260804T205500
-SUMMARY:4/6 · Carrusel · Tu negocio vive en una planilla
+SUMMARY:4/9 · Carrusel · Tu negocio vive en una planilla
 LOCATION:Instagram
 DESCRIPTION:FORMATO: Carrusel de 7 imágenes\, 1080x1350\n\nEs el más comp
- artible de los seis. No vende: nombra el problema. Es el que un dueño le 
- manda a otro dueño.\n\nARCHIVOS\, EN ESTE ORDEN:\n/Users/coru/Desktop/Pro
- yectos/surlabs-social/carruseles/salida/b1.png\n/Users/coru/Desktop/Proyec
- tos/surlabs-social/carruseles/salida/b2.png\n/Users/coru/Desktop/Proyectos
- /surlabs-social/carruseles/salida/b3.png\n/Users/coru/Desktop/Proyectos/su
- rlabs-social/carruseles/salida/b4.png\n/Users/coru/Desktop/Proyectos/surla
- bs-social/carruseles/salida/b5.png\n/Users/coru/Desktop/Proyectos/surlabs-
- social/carruseles/salida/b6.png\n/Users/coru/Desktop/Proyectos/surlabs-soc
- ial/carruseles/salida/b7.png\n\nCAPTION:\nTodo negocio chico empieza así:
-  una planilla\, un cuaderno y el WhatsApp del dueño.\n\nNo está mal. Es 
- lo que hay que hacer al principio.\n\nEl problema aparece después: cuando
-  el negocio crece y todo sigue pasando por vos. Ahí el cuello de botella 
- no es el local ni el equipo. Sos vos contestando.\n\nSi te pasa\, contame 
- por DM en qué se te va el tiempo. Te digo si se puede resolver y cómo. S
- i no se puede\, también te lo digo.\n\nHASHTAGS:\n#pymesuy #emprendedores
- uy #montevideo #gestion #uruguay\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBus
- cá en Instagram negocios de este rubro en Montevideo cuyo perfil muestre 
- el problema a la vista (la carta es una foto de un papel\, "reservas por D
- M" en la bio\, precios contestados uno por uno en comentarios). Escribiles
-  corto\, sin precio y con algo para tocar.\n\nEse es el motor real. El pos
- teo solo abre la puerta.
+ artible de los nueve. No vende: nombra el problema. Es el que un dueño le
+  manda a otro dueño.\n\nARCHIVOS\, EN ESTE ORDEN:\n/Users/coru/Desktop/Pr
+ oyectos/surlabs-social/carruseles/salida/b1.png\n/Users/coru/Desktop/Proye
+ ctos/surlabs-social/carruseles/salida/b2.png\n/Users/coru/Desktop/Proyecto
+ s/surlabs-social/carruseles/salida/b3.png\n/Users/coru/Desktop/Proyectos/s
+ urlabs-social/carruseles/salida/b4.png\n/Users/coru/Desktop/Proyectos/surl
+ abs-social/carruseles/salida/b5.png\n/Users/coru/Desktop/Proyectos/surlabs
+ -social/carruseles/salida/b6.png\n/Users/coru/Desktop/Proyectos/surlabs-so
+ cial/carruseles/salida/b7.png\n\nCAPTION:\nTodo negocio chico empieza así
+ : una planilla\, un cuaderno y el WhatsApp del dueño.\n\nNo está mal. Es
+  lo que hay que hacer al principio.\n\nEl problema aparece después: cuand
+ o el negocio crece y todo sigue pasando por vos. Ahí el cuello de botella
+  no es el local ni el equipo. Sos vos contestando.\n\nSi te pasa\, contame
+  por DM en qué se te va el tiempo. Te digo si se puede resolver y cómo. 
+ Si no se puede\, también te lo digo.\n\nHASHTAGS:\n#pymesuy #emprendedore
+ suy #montevideo #gestion #uruguay\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBu
+ scá en Instagram negocios de este rubro en Montevideo cuyo perfil muestre
+  el problema a la vista (la carta es una foto de un papel\, "reservas por 
+ DM" en la bio\, precios contestados uno por uno en comentarios). Escribile
+ s corto\, sin precio y con algo para tocar.\n\nEse es el motor real. El po
+ steo solo abre la puerta.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:4/6 · Carrusel · Tu negocio vive en una planilla
+DESCRIPTION:4/9 · Carrusel · Tu negocio vive en una planilla
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -171,7 +171,7 @@ UID:surlabs-post-5@surlabs.tech
 DTSTAMP:20260725T120000Z
 DTSTART;TZID=America/Montevideo:20260806T203000
 DTEND;TZID=America/Montevideo:20260806T205500
-SUMMARY:5/6 · Reel general · Cómo trabajamos
+SUMMARY:5/9 · Reel general · Cómo trabajamos
 LOCATION:Instagram
 DESCRIPTION:FORMATO: Reel vertical\, 18 segundos\n\nARCHIVO:\n/Users/coru/D
  esktop/Proyectos/surlabs-social/videos/surlabs-reel-confianza/renders/vide
@@ -197,7 +197,7 @@ DESCRIPTION:FORMATO: Reel vertical\, 18 segundos\n\nARCHIVO:\n/Users/coru/D
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:5/6 · Reel general · Cómo trabajamos
+DESCRIPTION:5/9 · Reel general · Cómo trabajamos
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -205,33 +205,33 @@ UID:surlabs-post-6@surlabs.tech
 DTSTAMP:20260725T120000Z
 DTSTART;TZID=America/Montevideo:20260808T130000
 DTEND;TZID=America/Montevideo:20260808T132500
-SUMMARY:6/6 · Carrusel · Comercio y catálogo
+SUMMARY:6/9 · Carrusel · Comercio y catálogo
 LOCATION:Instagram
-DESCRIPTION:FORMATO: Carrusel de 6 imágenes\, 1080x1350\n\nCon este quedan
-  6 publicaciones: dos filas completas de la grilla del perfil.\n\nARCHIVOS
- \, EN ESTE ORDEN:\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles
- /salida/c1.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/sa
- lida/c2.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salid
- a/c3.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/c
- 4.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/c5.p
- ng\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/c6.png\
- n\nCAPTION:\n"¿Tenés lista de precios?"\n"¿Y en talle M?"\n"¿Hacés en
- víos?"\n\nCuarenta veces por día\, la misma respuesta escrita a mano\, m
- ientras atendés el local.\n\nUn catálogo online contesta todo eso solo\,
-  muestra lo que tenés y toma el pedido mientras vos cerrás la persiana.\
- n\nEstá funcionando en el link de la bio. Entrá y armá un pedido para v
- er cómo se siente del lado del cliente.\n\nTiendas\, boutiques\, distribu
- idoras\, viveros: si hoy pasás la lista por WhatsApp\, esto es para vos.\
- n\nHASHTAGS:\n#comerciouy #montevideo #tiendaonline #catalogodigital #pyme
- suy\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBuscá en Instagram negocios de 
- este rubro en Montevideo cuyo perfil muestre el problema a la vista (la ca
- rta es una foto de un papel\, "reservas por DM" en la bio\, precios contes
- tados uno por uno en comentarios). Escribiles corto\, sin precio y con alg
- o para tocar.\n\nEse es el motor real. El posteo solo abre la puerta.
+DESCRIPTION:FORMATO: Carrusel de 6 imágenes\, 1080x1350\n\nCierra la segun
+ da fila de la grilla del perfil.\n\nARCHIVOS\, EN ESTE ORDEN:\n/Users/coru
+ /Desktop/Proyectos/surlabs-social/carruseles/salida/c1.png\n/Users/coru/De
+ sktop/Proyectos/surlabs-social/carruseles/salida/c2.png\n/Users/coru/Deskt
+ op/Proyectos/surlabs-social/carruseles/salida/c3.png\n/Users/coru/Desktop/
+ Proyectos/surlabs-social/carruseles/salida/c4.png\n/Users/coru/Desktop/Pro
+ yectos/surlabs-social/carruseles/salida/c5.png\n/Users/coru/Desktop/Proyec
+ tos/surlabs-social/carruseles/salida/c6.png\n\nCAPTION:\n"¿Tenés lista d
+ e precios?"\n"¿Y en talle M?"\n"¿Hacés envíos?"\n\nCuarenta veces por 
+ día\, la misma respuesta escrita a mano\, mientras atendés el local.\n\n
+ Un catálogo online contesta todo eso solo\, muestra lo que tenés y toma 
+ el pedido mientras vos cerrás la persiana.\n\nEstá funcionando en el lin
+ k de la bio. Entrá y armá un pedido para ver cómo se siente del lado de
+ l cliente.\n\nTiendas\, boutiques\, distribuidoras\, viveros: si hoy pasá
+ s la lista por WhatsApp\, esto es para vos.\n\nHASHTAGS:\n#comerciouy #mon
+ tevideo #tiendaonline #catalogodigital #pymesuy\n\nDESPUÉS DE PUBLICAR\, 
+ 20 MINUTOS\nBuscá en Instagram negocios de este rubro en Montevideo cuyo 
+ perfil muestre el problema a la vista (la carta es una foto de un papel\, 
+ "reservas por DM" en la bio\, precios contestados uno por uno en comentari
+ os). Escribiles corto\, sin precio y con algo para tocar.\n\nEse es el mot
+ or real. El posteo solo abre la puerta.
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:6/6 · Carrusel · Comercio y catálogo
+DESCRIPTION:6/9 · Carrusel · Comercio y catálogo
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -239,7 +239,7 @@ UID:surlabs-revision@surlabs.tech
 DTSTAMP:20260725T120000Z
 DTSTART;TZID=America/Montevideo:20260810T190000
 DTEND;TZID=America/Montevideo:20260810T193000
-SUMMARY:Revisión de las dos semanas de Instagram
+SUMMARY:Media revisión: qué rubro está preguntando
 LOCATION:Instagram
 DESCRIPTION:A esta escala los seguidores no dicen nada. Mirá estas tres:\n
  \n1. VISITAS AL PERFIL. Es la métrica real: mide si el que ve un posteo q
@@ -254,7 +254,136 @@ DESCRIPTION:A esta escala los seguidores no dicen nada. Mirá estas tres:\n
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY
-DESCRIPTION:Revisión de las dos semanas de Instagram
+DESCRIPTION:Media revisión: qué rubro está preguntando
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-7@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260811T203000
+DTEND;TZID=America/Montevideo:20260811T205500
+SUMMARY:7/9 · Reel · Te dejaron la web a medias
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Reel vertical\, 15 segundos\n\nARCHIVO:\n/Users/coru/D
+ esktop/Proyectos/surlabs-social/videos/surlabs-reel-rescate/renders/video.
+ mp4\n\nARRANCA EL ÁNGULO DEL RESCATE. Le habla a quien ya pagó por softw
+ are y quedó a mitad de camino: público precalificado\, con presupuesto p
+ robado y dolor urgente.\n\nREGLA AL CONTESTAR LOS COMENTARIOS: nunca ensuc
+ iar al proveedor anterior. El cliente lo eligió\, así que burlarse de é
+ l es llamarlo tonto en la cara. La culpa va sobre la situación\, jamás s
+ obre su decisión.\n\nTEXTO EN PANTALLA (primeros 3 segundos):\npagaste un
+ a web y quedó A MEDIAS\n\nCAPTION:\nPagaste una web y quedó a medias.\n\
+ nNunca la terminaron. No te dieron los accesos. Y ahora no te contestan.\n
+ \nPasa todo el tiempo\, y casi nunca es culpa tuya: elegiste con la inform
+ ación que tenías.\n\nLa buena noticia es que casi siempre se puede retom
+ ar. No hace falta tirar todo y empezar de cero: lo que está bien hecho se
+  aprovecha y lo que no\, se reemplaza.\n\nNosotros agarramos proyectos que
+  dejó otro. Contanos qué pasó y te decimos si tiene arreglo.\n\nHASHTAG
+ S:\n#pymesuy #montevideo #desarrolloweb #emprendedoresuy\n\nANTES DE PUBLI
+ CAR\nEl video no tiene audio a propósito: elegí un audio en tendencia de
+ ntro de Instagram al subirlo. Es de las pocas palancas de alcance que le q
+ ueda a un Reel.\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBuscá en Instagram 
+ negocios de este rubro en Montevideo cuyo perfil muestre el problema a la 
+ vista (la carta es una foto de un papel\, "reservas por DM" en la bio\, pr
+ ecios contestados uno por uno en comentarios). Escribiles corto\, sin prec
+ io y con algo para tocar.\n\nEse es el motor real. El posteo solo abre la 
+ puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:7/9 · Reel · Te dejaron la web a medias
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-8@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260813T203000
+DTEND;TZID=America/Montevideo:20260813T205500
+SUMMARY:8/9 · Carrusel · Retomar lo que dejó otro
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Carrusel de 6 imágenes\, 1080x1350\n\nContesta las tr
+ es objeciones que frenan a alguien que ya se quemó una vez.\n\nARCHIVOS\,
+  EN ESTE ORDEN:\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/s
+ alida/d1.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/sali
+ da/d2.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/
+ d3.png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/d4.
+ png\n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/d5.png
+ \n/Users/coru/Desktop/Proyectos/surlabs-social/carruseles/salida/d6.png\n\
+ nCAPTION:\n"¿Se puede arreglar lo que me dejó el anterior?"\n\nEs la pre
+ gunta que más nos hacen\, y la respuesta casi siempre es sí.\n\nNo hace 
+ falta tirar todo y empezar de cero. Lo que está bien hecho se aprovecha\,
+  lo que no se reemplaza\, y casi nunca hay que rehacer el 100%.\n\n¿Y si 
+ está muy mal hecho? Te lo decimos de frente. A veces rehacer sale más ba
+ rato que parchar\, y preferimos que lo sepas antes y no a mitad de camino.
+ \n\n¿Pueden con cualquier tecnología? Con casi todas. Y si no podemos\, 
+ te lo decimos en la primera charla en vez de aceptar y averiguar después.
+ \n\nMandanos el link y le damos una mirada.\n\nHASHTAGS:\n#pymesuy #montev
+ ideo #desarrolloweb #uruguay\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS\nBuscá 
+ en Instagram negocios de este rubro en Montevideo cuyo perfil muestre el p
+ roblema a la vista (la carta es una foto de un papel\, "reservas por DM" e
+ n la bio\, precios contestados uno por uno en comentarios). Escribiles cor
+ to\, sin precio y con algo para tocar.\n\nEse es el motor real. El posteo 
+ solo abre la puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:8/9 · Carrusel · Retomar lo que dejó otro
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-post-9@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260815T130000
+DTEND;TZID=America/Montevideo:20260815T132500
+SUMMARY:9/9 · Reel · El diagnóstico sin costo
+LOCATION:Instagram
+DESCRIPTION:FORMATO: Reel vertical\, 12 segundos\n\nARCHIVO:\n/Users/coru/D
+ esktop/Proyectos/surlabs-social/videos/surlabs-reel-diagnostico/renders/vi
+ deo.mp4\n\nEs la pieza de conversión del ángulo del rescate: pide muy po
+ co (un link) y el remate honesto es lo que genera la confianza.\n\nTEXTO E
+ N PANTALLA (primeros 3 segundos):\nantes de tirarlo y arrancar de CERO\n\n
+ CAPTION:\nAntes de tirarlo y arrancar de cero\, que alguien lo mire.\n\nMa
+ ndanos el link. Le damos una mirada y te decimos qué tiene: qué se puede
+  aprovechar\, qué hay que reemplazar y cuánto trabajo es.\n\nSin costo y
+  sin compromiso.\n\nY si no se puede arreglar\, también te lo decimos. Pr
+ eferimos perder un proyecto antes que cobrarte por parchar algo que no va 
+ a aguantar.\n\nHASHTAGS:\n#pymesuy #montevideo #desarrolloweb #emprendedor
+ esuy\n\nANTES DE PUBLICAR\nEl video no tiene audio a propósito: elegí un
+  audio en tendencia dentro de Instagram al subirlo. Es de las pocas palanc
+ as de alcance que le queda a un Reel.\n\nDESPUÉS DE PUBLICAR\, 20 MINUTOS
+ \nBuscá en Instagram negocios de este rubro en Montevideo cuyo perfil mue
+ stre el problema a la vista (la carta es una foto de un papel\, "reservas 
+ por DM" en la bio\, precios contestados uno por uno en comentarios). Escri
+ biles corto\, sin precio y con algo para tocar.\n\nEse es el motor real. E
+ l posteo solo abre la puerta.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:9/9 · Reel · El diagnóstico sin costo
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:surlabs-cierre@surlabs.tech
+DTSTAMP:20260725T120000Z
+DTSTART;TZID=America/Montevideo:20260817T190000
+DTEND;TZID=America/Montevideo:20260817T193000
+SUMMARY:Cierre de las tres semanas de Instagram
+LOCATION:Instagram
+DESCRIPTION:Ya están los 9 posteos arriba: tres filas completas de la gril
+ la del perfil.\n\nQUÉ MIRAR\, en tu planilla y no en el panel de Instagra
+ m:\n\n1. ¿De qué rubro vinieron los DMs? Ese es el próximo Reel\, clona
+ ndo la plantilla de gastronomía.\n2. ¿Cuántos DMs vinieron del ángulo 
+ del rescate (posteos 7\, 8 y 9) contra los de rubro? Si el rescate trae m
+ ás\, ahí está tu posicionamiento y conviene volcarse a eso.\n3. ¿Algui
+ en mandó un link para diagnosticar? Contestá esos primero: es el lead m
+ ás caliente que vas a tener.\n\nDECISIÓN DE LA SEMANA 4:\nSi el rescate 
+ funcionó\, la landing debería decirlo también. Hoy no hay ni una línea
+  sobre retomar proyectos de otros\, y si ese es el ángulo que convierte\,
+  tiene que estar en el sitio y no solo en Instagram.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Cierre de las tres semanas de Instagram
 END:VALARM
 END:VEVENT
 END:VCALENDAR

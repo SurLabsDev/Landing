@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight, ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { demos } from "@/lib/demos";
+import { EV, evDemo, trackEvent } from "@/lib/track";
 
 /** Velocidad del desplazamiento automático, en píxeles por segundo. */
 const AUTO_PX_PER_SEC = 32;
@@ -46,6 +47,7 @@ export function WorkTrack() {
     const onScreen = useRef(false);
     // Va y vuelve en lugar de rebobinar: rebobinar 3600px de golpe parece un bug.
     const dir = useRef<1 | -1>(1);
+    const engaged = useRef(false);
 
     const sync = useCallback(() => {
         const el = track.current;
@@ -76,7 +78,18 @@ export function WorkTrack() {
     }, []);
 
     /** Corta el auto-avance para siempre. Lo llama cualquier gesto del usuario. */
-    const stopAuto = useCallback(() => setAuto(false), []);
+    const stopAuto = useCallback(() => {
+        setAuto(false);
+        // Una sola vez por visita: mide si la galería se toca o solo se mira
+        // pasar, que es lo que decide si el auto-avance tiene que seguir
+        // existiendo. Cuenta también el gesto de abrir una tarjeta, porque en
+        // el pointerdown todavía no se sabe si va a ser un clic o un arrastre;
+        // esos clics quedan igual identificados aparte como demo/*.
+        if (!engaged.current) {
+            engaged.current = true;
+            trackEvent(EV.galleryUsed);
+        }
+    }, []);
 
     // Solo se mueve cuando la sección está a la vista. Animar algo que nadie
     // está mirando gasta batería sin que sirva de nada.
@@ -217,6 +230,7 @@ export function WorkTrack() {
                     <a
                         key={demo.id}
                         data-card
+                        data-ev={evDemo(demo.id)}
                         href={demo.url}
                         target="_blank"
                         rel="noopener noreferrer"

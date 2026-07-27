@@ -155,6 +155,24 @@ Then `sips -Z 1440 raw.png --out tmp.png && cwebp -q 80 -m 6 tmp.png -o public/d
 
 [Contact.tsx](src/components/sections/Contact.tsx) posts nothing to a server. It templates the fields into a Spanish message and opens `wa.me/59891661552`. It also detects a blocked popup and offers a manual link, because a silently-swallowed submit is a lost lead. **Field names and order are preserved from the original form** — don't rename them casually.
 
+### Analytics: synthetic page views, because custom events are paywalled
+
+Vercel Web Analytics + Speed Insights, mounted once via [Metrics.tsx](src/components/ui/Metrics.tsx). The project is on the **Hobby plan**, and that dictates the whole design.
+
+**`track()` does not work here and fails silently.** Vercel's plan matrix lists Custom Events as `-` for Hobby. Nothing in `@vercel/analytics` does plan detection: the call fires a real POST, returns 200, throws nothing, warns nothing, and never appears in the dashboard. Don't "fix" the tracking by switching to `track()` — you'd get a month of confident, empty data. Same for **UTM breakdowns**, which need the Web Analytics Plus add-on.
+
+So conversions are recorded as **synthetic page views** at invented paths under `/ev/`, via `window.va("pageview", { route, path })` — the exact call `@vercel/analytics/next` makes on every route change. See [track.ts](src/lib/track.ts) for the event names.
+
+Three rules that must survive a refactor:
+
+- **Never replace this with redirect routes** (`/go/whatsapp` → 307 → `wa.me`). The tracker is a client-side script; on a server redirect the browser never renders HTML at that path, so nothing loads and **nothing is recorded**. A client-side interstitial would work but puts a flash and a delay on the most important path in the site.
+- **Links carry `data-ev`, never `onClick`.** One delegated capture-phase listener in `Metrics` reads it, so Hero, Services and Footer stay Server Components and no per-link JS ships. Adding a measured link means adding the attribute and nothing else.
+- **`trackEvent` primes `window.vaq` itself.** Events fired during mount (the traffic source) run *before* `<Analytics />`'s effect creates the queue, and were being dropped entirely. This was caught only by driving a real browser.
+
+**Quota.** 50,000 events/month, pooled across every project on the team, page views and synthetic ones costing the same. A full visit here spends about 5, so the ceiling is near 10,000 visits/month; over it, Vercel pauses collection rather than billing. `surlabs-demos` currently has no analytics — if that changes, it eats the same budget. Speed Insights is a **separate, tighter** quota (10,000 data points, several per visit) and Hobby allows it on **one project only**, which is why it renders in production only.
+
+**Verifying it.** `mode="development"` (anything that isn't a production Vercel deploy) loads Vercel's debug script, which logs `[view] <url>` to the console and sends nothing. Drive a real browser and read those console lines — see `scratchpad/verify-metrics.mjs`. Do **not** verify by stubbing `window.va`: the real script replaces it on load, so a spy only ever catches the first queued event and everything looks broken.
+
 ## Conventions
 
 - All user-facing copy is **Rioplatense Spanish** ("Hablemos", "Contanos", "Probalo"). Code, comments and commits are English.

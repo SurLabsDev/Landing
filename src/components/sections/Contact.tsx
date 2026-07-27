@@ -9,6 +9,7 @@ import {
     ArrowUpRight,
 } from "@phosphor-icons/react/dist/ssr";
 import { WHATSAPP_NUMBER, WHATSAPP_DISPLAY, CONTACT_EMAIL } from "@/lib/demos";
+import { EV, trackEvent } from "@/lib/track";
 
 type Status = "idle" | "opening" | "blocked";
 
@@ -36,6 +37,10 @@ export function Contact() {
         e.preventDefault();
         setStatus("opening");
 
+        // Antes de abrir nada: es la conversión de más valor del sitio, porque
+        // llega con nombre, rubro y necesidad ya escritos.
+        trackEvent(EV.waForm);
+
         const url = buildWhatsappUrl(formData);
         const win = window.open(url, "_blank", "noopener,noreferrer");
 
@@ -43,6 +48,9 @@ export function Contact() {
         // silencio. Detectarlo y ofrecer el enlace directo evita perder el lead.
         if (!win || win.closed) {
             setStatus("blocked");
+            // Se registra aparte para saber si esto pasa de verdad y cuánto.
+            // Si apareciera seguido, el formulario necesita otra solución.
+            trackEvent(EV.waBlocked);
         } else {
             setStatus("idle");
         }
@@ -72,6 +80,7 @@ export function Contact() {
                             href={`https://wa.me/${WHATSAPP_NUMBER}`}
                             target="_blank"
                             rel="noopener noreferrer"
+                            data-ev={EV.waContact}
                             className="rounded-brand group flex items-center justify-between gap-6 bg-ember p-7 transition-colors hover:bg-ember-hot lg:p-8"
                         >
                             <span className="flex items-center gap-4">
@@ -104,6 +113,7 @@ export function Contact() {
                                     <dd>
                                         <a
                                             href={`mailto:${CONTACT_EMAIL}`}
+                                            data-ev={EV.mailContact}
                                             className="link-underline text-bone"
                                         >
                                             {CONTACT_EMAIL}
@@ -239,6 +249,7 @@ export function Contact() {
                                         href={buildWhatsappUrl(formData)}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        data-ev={EV.waRecovered}
                                         className="link-underline font-semibold"
                                     >
                                         Abrir el chat manualmente

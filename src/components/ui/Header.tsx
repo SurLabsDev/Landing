@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { List, X } from "@phosphor-icons/react/dist/ssr";
 import { Logo } from "@/components/brand/Logo";
+import { EV } from "@/lib/track";
 
 const nav = [
     { href: "#proyectos", label: "Trabajo" },
@@ -74,6 +75,7 @@ export function Header() {
                         ))}
                         <Link
                             href="#contacto"
+                            data-ev={EV.ctaHeader}
                             className="rounded-brand bg-ember px-5 py-2.5 text-[0.9375rem] font-semibold text-ink transition-colors hover:bg-ember-hot active:translate-y-px"
                         >
                             Hablemos
@@ -114,6 +116,7 @@ export function Header() {
                 <Link
                     href="#contacto"
                     onClick={() => setOpen(false)}
+                    data-ev={EV.ctaMenu}
                     className="rounded-brand mt-10 bg-ember px-6 py-5 text-center text-lg font-bold text-ink"
                 >
                     Hablemos
