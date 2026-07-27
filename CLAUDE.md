@@ -173,6 +173,24 @@ Three rules that must survive a refactor:
 
 **Verifying it.** `mode="development"` (anything that isn't a production Vercel deploy) loads Vercel's debug script, which logs `[view] <url>` to the console and sends nothing. Drive a real browser and read those console lines — see `scratchpad/verify-metrics.mjs`. Do **not** verify by stubbing `window.va`: the real script replaces it on load, so a spy only ever catches the first queued event and everything looks broken.
 
+### SEO: one page, so the entity does the work
+
+[site.ts](src/lib/site.ts) is the single source for the canonical URL, description and service list; metadata, `robots.ts`, `sitemap.ts` and the JSON-LD all read from it.
+
+**The canonical host is `www.surlabs.tech`.** The apex redirects there, so `SITE_URL` carries the `www` and everything else derives from it. `metadataBase` used to point at the apex, which made every Open Graph URL resolve to the host that redirects. If the preference ever flips in the Vercel dashboard, change that one constant.
+
+**The apex redirect is a 307, and it should be a 308.** A temporary redirect tells search engines to keep both hosts, splitting the signals. It's a domain setting in the Vercel dashboard, not something this repo can fix.
+
+**Schema lives in [schema.ts](src/lib/schema.ts) as one `@graph`**, not three separate tags, so the nodes reference each other by `@id` and read as one entity. `ProfessionalService` declares only city and country: **there is no public street address and inventing one to unlock Google's local rich result is not an option.** The real lever for local search is a Google Business Profile, which is free and lives outside this repo.
+
+**[faq.ts](src/lib/faq.ts) feeds both the visible section and the `FAQPage` schema, and that is not a convenience.** Marking up answers a visitor cannot see is grounds for a manual penalty, so the two can never diverge. The section renders every answer openly rather than in a `<details>` accordion for the same reason, plus the text is the whole asset: it is what gets indexed and what an AI assistant can quote.
+
+The questions come from the real objections in `.agents/product-marketing.md`. **No prices or timelines appear because there is still no public pricing policy** — when there is one, the first answer is the one to change, and it will be the highest-value edit on the page.
+
+**Don't chase keywords in the visible copy.** The body deliberately omits "desarrollo" and "pyme"; those ride in the description and the schema. The headlines are brand copy and stuffing them reads worse to humans and measurably worse to AI engines.
+
+**`/ev/` is disallowed in robots.txt** — those paths are the synthetic analytics views, not pages. AI crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended) are allowed on purpose: getting named when someone asks an assistant for a developer in Montevideo is worth more than the visit it costs.
+
 ## Conventions
 
 - All user-facing copy is **Rioplatense Spanish** ("Hablemos", "Contanos", "Probalo"). Code, comments and commits are English.

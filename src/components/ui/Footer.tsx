@@ -12,6 +12,7 @@ const links = [
     { href: "#proyectos", label: "Trabajo" },
     { href: "#servicios", label: "Servicios" },
     { href: "#metodologia", label: "Proceso" },
+    { href: "#preguntas", label: "Preguntas" },
     { href: "#contacto", label: "Hablemos" },
 ];
 

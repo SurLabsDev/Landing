@@ -1,0 +1,50 @@
+# Surlabs
+
+> Desarrollo de software a medida en Montevideo, Uruguay. Construimos las
+> herramientas digitales que un negocio todavía hace a mano: sistemas de
+> reservas y turnos, cartas y catálogos digitales, paneles de gestión y páginas
+> web para comercios y pymes.
+
+Surlabs trabaja con negocios de todo Uruguay: gastronomía, salud y consultorios,
+inmobiliarias, comercio minorista, gimnasios y wellness, servicios profesionales
+y educación. El interlocutor típico es el dueño del negocio, no un área de
+sistemas.
+
+Antes de empezar cualquier proyecto se entrega por escrito el alcance, el precio
+y el plazo. Los proyectos que dejó otro proveedor a medio hacer se pueden
+retomar: se aprovecha lo que está bien hecho y se reemplaza lo que no.
+
+## Servicios
+
+- **Sistemas de reservas y turnos**: agenda online para que el cliente reserve
+  solo, con confirmaciones y recordatorios automáticos.
+- **Cartas y catálogos digitales**: menú o catálogo que el dueño actualiza sin
+  depender de nadie y que toma pedidos sin ida y vuelta por WhatsApp.
+- **Paneles de gestión y CRM**: el reemplazo de la planilla, con clientes, stock
+  y ventas en un lugar que puede mirar todo el equipo.
+- **Páginas web para comercios y pymes**: sitios pensados para captar clientes.
+
+## Demos públicas
+
+Hay doce productos funcionando, abiertos y sin registro, en
+https://demos.surlabs.tech. Cada uno corresponde a un rubro distinto y se puede
+usar entero, no son capturas de pantalla.
+
+## Enlaces
+
+- [Sitio principal](https://www.surlabs.tech): servicios, proceso de trabajo y
+  preguntas frecuentes.
+- [Demos](https://demos.surlabs.tech): los doce productos de ejemplo.
+- [Instagram](https://www.instagram.com/surlabs.tech)
+
+## Contacto
+
+- WhatsApp: +598 91 661 552
+- Correo: hola@surlabs.tech
+- Ubicación: Montevideo, Uruguay
+
+## Notas
+
+- El sitio y la comunicación están en español rioplatense.
+- No hay precios publicados: dependen del alcance y se pasan por escrito antes
+  de empezar.

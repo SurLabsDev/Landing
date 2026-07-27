@@ -33,6 +33,7 @@ const SECTIONS: Record<string, string> = {
     proyectos: "work",
     servicios: "services",
     metodologia: "process",
+    preguntas: "faq",
     contacto: "contact",
 };
 

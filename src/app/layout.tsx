@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google";
 import { Metrics } from "@/components/ui/Metrics";
+import { siteSchema } from "@/lib/schema";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 /**
@@ -21,17 +23,39 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+/*
+  El título lleva "en Montevideo" porque es una búsqueda local: alguien que
+  escribe "desarrollo de software Montevideo" no encuentra nada en un título que
+  solo diga "para tu negocio". Entra en 60 caracteres, así que no se corta en
+  los resultados.
+*/
+const TITLE = "Surlabs | Software a medida en Montevideo, Uruguay";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://surlabs.tech"),
-  title: "Surlabs | Software a medida para tu negocio",
-  description:
-    "Diseñamos y construimos las herramientas digitales que tu equipo usa todos los días. Reservas, pedidos, clientes y stock. Montevideo, Uruguay.",
+  // Iba sin www y el sitio se sirve CON www. Eso hacía que las URL absolutas de
+  // Open Graph apuntaran al dominio que redirige, no al bueno.
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: SITE_DESCRIPTION,
+  // No había ninguna: sin canonical, cualquier variante con parámetros (los
+  // ?utm_source= que usamos para medir, sin ir más lejos) se puede indexar
+  // aparte y competir consigo misma.
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Surlabs | Software a medida para tu negocio",
-    description:
-      "Diseñamos y construimos las herramientas digitales que tu equipo usa todos los días.",
+    title: TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
     locale: "es_UY",
     type: "website",
+  },
+  // Antes quedaba en "summary", que muestra una miniatura chica al costado.
+  // Con imagen propia conviene la tarjeta grande.
+  twitter: { card: "summary_large_image", title: TITLE, description: SITE_DESCRIPTION },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
 };
 
@@ -42,6 +66,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${bricolage.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        {/*
+          Datos estructurados. Van con dangerouslySetInnerHTML porque es la
+          única forma de emitir JSON-LD sin que React lo escape: es la manera
+          que documenta Next para esto, no un atajo.
+        */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema()) }}
+        />
+      </head>
       <body className="grain min-h-[100dvh] bg-ink font-sans text-bone">
         {/* Sin JS no hay IntersectionObserver, así que nada puede quedar invisible. */}
         <noscript>
