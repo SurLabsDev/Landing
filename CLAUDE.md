@@ -121,6 +121,12 @@ No CMS, no data layer, no API routes.
 
 Cards link to `https://demos.surlabs.tech/ejemplo1` … `/ejemplo12`, which live in the sibling project `../surlabs-demos`. Adding an entry to `demos.ts` does nothing unless that route exists and is deployed there.
 
+**The two repos are tied together on purpose, and both halves have to stay.** `surlabs-demos/src/lib/schema.ts` declares its Organization node with the *same* `@id` this repo uses (`https://www.surlabs.tech/#organizacion`), which is what tells a search engine the subdomain and the main site are one company rather than two unrelated domains. And every demo now links back here via `DemoNav`, with `?utm_source=demos` so the visits land as `/ev/from/demos` in the analytics. **If `SITE_URL` changes here, that `@id` and those links have to change there too.**
+
+**Each demo page carries its own title and OG image.** All twelve used to inherit `"Demos | SurLabs"` from the root layout, so they were twelve pages competing as the same thing. Titles now target `"ejemplo de [X]"` rather than the rubro itself: a demo is not a restaurant, and someone searching for a restaurant who lands on one leaves annoyed. The per-demo OG images (`surlabs-demos/public/og/*.jpg`) are crops of the same screenshots in `public/demos/`, so **regenerating the captures here means regenerating those too** or the link previews go stale. They matter because demo links get sent by WhatsApp and DM, where a preview is the whole first impression.
+
+**The demo pages are all `"use client"`,** so they cannot export `metadata`. Each has a tiny server `layout.tsx` beside it that does nothing but supply it.
+
 **Screenshots are generated, not hand-made.** `public/demos/ejemploN.webp` are real captures at 1440x900, ~565 KB for all 12. Keep it that way: do not commit multi-megabyte PNGs.
 
 **A plain headless screenshot silently produces broken captures.** The demos reveal content on scroll (IntersectionObserver entrance animations), and a headless capture never scrolls — so anything below the initial fold never animates in and lands as a blank area. This is not hypothetical: it shipped. `ejemplo7` sat in production with an empty chat panel and `ejemplo12` with no hero headline, and the missing content read as "that's how the demo looks."
