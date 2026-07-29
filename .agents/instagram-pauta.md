@@ -153,6 +153,6 @@ En orden, porque cada uno depende del anterior:
 
 1. Página de Facebook vinculada a `@surlabs.tech`. **Sin página de Facebook no se puede pautar**, aunque el anuncio salga solo en Instagram.
 2. Administrador comercial (Meta Business Suite) con la página y la cuenta de Instagram adentro.
-3. **Migrar el +598 91 661 552 a WhatsApp Business.** Es gratis, conserva el historial y es requisito para las campañas de clic a WhatsApp.
+3. **Migrar el +598 91 519 293 a WhatsApp Business.** Es gratis, conserva el historial y es requisito para las campañas de clic a WhatsApp.
 4. Conectar el WhatsApp Business al administrador comercial.
 5. Medio de pago cargado. En Uruguay se suma IVA sobre el gasto publicitario, así que presupuestá un poco más de lo que ves en el panel.

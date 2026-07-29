@@ -113,7 +113,7 @@ Mientras no haya clientes, **la prueba es el producto funcionando**, no la palab
 
 ## Goals
 **Business goal:** Conseguir los primeros clientes pagos y, con ellos, los primeros casos citables.
-**Conversion action:** Iniciar una conversación por WhatsApp al +598 91 661 552.
+**Conversion action:** Iniciar una conversación por WhatsApp al +598 91 519 293.
 **Current metrics:** Landing recién relanzada. Sin datos de tráfico ni de conversión todavía. Sin analítica instalada. [POR CONFIRMAR]
 
 ## Changelog

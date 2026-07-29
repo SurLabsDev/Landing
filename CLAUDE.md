@@ -159,7 +159,7 @@ Then `sips -Z 1440 raw.png --out tmp.png && cwebp -q 80 -m 6 tmp.png -o public/d
 
 ### Contact is a WhatsApp deep link
 
-[Contact.tsx](src/components/sections/Contact.tsx) posts nothing to a server. It templates the fields into a Spanish message and opens `wa.me/59891661552`. It also detects a blocked popup and offers a manual link, because a silently-swallowed submit is a lost lead. **Field names and order are preserved from the original form** — don't rename them casually.
+[Contact.tsx](src/components/sections/Contact.tsx) posts nothing to a server. It templates the fields into a Spanish message and opens `wa.me/59891519293`. It also detects a blocked popup and offers a manual link, because a silently-swallowed submit is a lost lead. **Field names and order are preserved from the original form** — don't rename them casually.
 
 ### Analytics: synthetic page views, because custom events are paywalled
 

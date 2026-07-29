@@ -43,7 +43,7 @@ Probá 12 productos funcionando ↓
 **Enlace:** `https://surlabs.tech`
 
 **Categoría:** Servicio de desarrollo de software
-**Botón de contacto:** WhatsApp al +598 91 661 552. Que no haya que salir de Instagram para escribir.
+**Botón de contacto:** WhatsApp al +598 91 519 293. Que no haya que salir de Instagram para escribir.
 
 **Historias destacadas** (se arman con capturas, sin grabar nada):
 

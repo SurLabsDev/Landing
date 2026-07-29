@@ -115,6 +115,6 @@ export const demos: Demo[] = [
 ];
 
 /** Número real de WhatsApp. Único canal de conversión del sitio. */
-export const WHATSAPP_NUMBER = "59891661552";
-export const WHATSAPP_DISPLAY = "+598 91 661 552";
+export const WHATSAPP_NUMBER = "59891519293";
+export const WHATSAPP_DISPLAY = "+598 91 519 293";
 export const CONTACT_EMAIL = "hola@surlabs.tech";
